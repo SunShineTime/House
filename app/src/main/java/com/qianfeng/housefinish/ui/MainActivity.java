@@ -21,6 +21,11 @@ import org.xutils.x;
 
 import java.lang.reflect.InvocationTargetException;
 
+
+/**
+ * 主页面
+ */
+
 @ContentView(R.layout.activity_main)
 public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedChangeListener {
 
