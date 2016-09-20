@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import com.qianfeng.housefinish.R;
 
 /**
- * RecyclerView这是疏影00.0
+ * RecyclerView这是疏影
  */
 public class MagicFragment extends BaseFragment {
 
