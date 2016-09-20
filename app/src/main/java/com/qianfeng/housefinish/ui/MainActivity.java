@@ -11,6 +11,7 @@ import android.widget.RadioGroup;
 
 import com.qianfeng.housefinish.R;
 import com.qianfeng.housefinish.fragments.AccountFragment;
+import com.qianfeng.housefinish.fragments.BaseFragment;
 import com.qianfeng.housefinish.fragments.CartFragment;
 import com.qianfeng.housefinish.fragments.GoodsFragment;
 import com.qianfeng.housefinish.fragments.HomeFragment;

@@ -8,10 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.qianfeng.housefinish.R;
-import com.qianfeng.housefinish.ui.BaseFragment;
 
 /**
- * RecyclerView这是疏影0.0.00000000
+ * 软装魔法
  */
 public class MagicFragment extends BaseFragment {
 

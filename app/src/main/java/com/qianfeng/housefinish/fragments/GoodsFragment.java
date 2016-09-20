@@ -8,10 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.qianfeng.housefinish.R;
-import com.qianfeng.housefinish.ui.BaseFragment;
 
 /**
- * Created by Administrator on 16-9-19.
+ * 商城
  */
 public class GoodsFragment extends BaseFragment {
 

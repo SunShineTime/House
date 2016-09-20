@@ -8,10 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.qianfeng.housefinish.R;
-import com.qianfeng.housefinish.ui.BaseFragment;
 
 /**
- * Created by Administrator on 16-9-19.
+ * 首页
  */
 public class HomeFragment extends BaseFragment {
 
@@ -22,5 +21,15 @@ public class HomeFragment extends BaseFragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         layout=inflater.inflate(R.layout.fragment_home,container,false);
         return layout;
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        initView();
+    }
+
+    private void initView() {
+
     }
 }
