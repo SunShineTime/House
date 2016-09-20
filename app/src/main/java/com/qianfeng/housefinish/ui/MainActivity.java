@@ -135,8 +135,6 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
     }
 
     //按返回键退出
-
-
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         // 判断按下的按钮是否是返回键
