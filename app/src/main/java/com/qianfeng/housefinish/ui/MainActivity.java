@@ -31,6 +31,10 @@ import java.lang.reflect.InvocationTargetException;
 /**
  * 主页面
  *  字体：楷体
+ *
+ *  mAssets = getAssets();
+ mFromAsset = Typeface.createFromAsset(mAssets, "fonts/kaiti.ttf");
+ mHome.setTypeface(mFromAsset);
  */
 
 @ContentView(R.layout.activity_main)
