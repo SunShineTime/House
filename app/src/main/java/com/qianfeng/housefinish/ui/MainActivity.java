@@ -30,6 +30,7 @@ import java.lang.reflect.InvocationTargetException;
 
 /**
  * 主页面
+ *  字体：楷体
  */
 
 @ContentView(R.layout.activity_main)
