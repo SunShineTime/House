@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import com.qianfeng.housefinish.R;
 
 /**
- * Created by Administrator on 16-9-19.
+ * RecyclerView
  */
 public class MagicFragment extends BaseFragment {
 
