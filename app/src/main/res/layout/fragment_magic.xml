@@ -3,6 +3,148 @@
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-    android:background="#0000ff">
+    >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/magic_image_height">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@mipmap/icon_magic_bg"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/magic_title_size"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/magic_title_height"
+            android:padding="10dp"
+            android:text="@string/magic_title"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/magic_text_size"
+            android:layout_marginTop="@dimen/magic_text_height"
+            android:text="@string/magic_text_one"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/magic_text_size"
+            android:layout_marginTop="@dimen/magic_text_height_two"
+            android:text="@string/magic_text_two"/>
+<Button
+    android:id="@+id/magic_kefu"
+    android:layout_width="100dp"
+    android:layout_height="@dimen/magic_btn_height_two"
+    android:layout_gravity="center"
+    android:background="@drawable/fragemnt_magic_btn"
+    android:layout_marginTop="@dimen/magic_btn_height"
+    android:textColor="@color/text"
+    android:text="@string/fragment_magic_btn"
+    android:drawableRight="@mipmap/icon_arrow_right_green"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+
+    />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        >
+
+
+        <Button
+            android:id="@+id/magic_classic_case"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@drawable/magic_btn_selector"
+            android:drawableTop="@mipmap/icon_magic_classic_case"
+            android:drawablePadding="5dp"
+            android:padding="20dp"
+            android:text="@string/fragment_magic_classic_case"
+            />
+        <Button
+            android:id="@+id/magic_choose_consult"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@drawable/magic_btn_selector"
+            android:drawableTop="@mipmap/icon_magic_choose_consult"
+            android:drawablePadding="5dp"
+            android:padding="20dp"
+            android:text="@string/fragment_magic_choose_consult"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/magic_image_case"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@drawable/magic_btn_selector"
+            android:drawableTop="@mipmap/icon_magic_image_case"
+            android:drawablePadding="5dp"
+            android:padding="20dp"
+            android:text="@string/fragment_magic_image_case"
+            />
+        <Button
+            android:id="@+id/magic_online_design"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@drawable/magic_btn_selector"
+            android:drawableTop="@mipmap/icon_magic_online_design"
+            android:drawablePadding="5dp"
+            android:padding="20dp"
+            android:text="@string/fragment_magic_online_design"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/magic_classroom"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@drawable/magic_btn_selector"
+            android:drawableTop="@mipmap/icon_magic_classroom"
+            android:drawablePadding="5dp"
+            android:padding="20dp"
+            android:text="@string/fragment_magic_classroom"
+            />
+        <Button
+            android:id="@+id/magic_diy"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@drawable/magic_btn_selector"
+            android:drawableTop="@mipmap/icon_magic_diy"
+            android:drawablePadding="5dp"
+            android:padding="20dp"
+            android:text="@string/fragment_magic_diy"
+            />
+    </LinearLayout>
 
 </LinearLayout>

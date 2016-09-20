@@ -5,4 +5,14 @@
     <string name="fragment_magic">软装魔法</string>
     <string name="fragment_cart">购物车</string>
     <string name="fragment_account">我</string>
+    <string name="magic_title">家 居 软 装 魔 法</string>
+    <string name="magic_text_one">HOME FURNISHING</string>
+    <string name="magic_text_two">SOFT OUTFIT</string>
+    <string name="fragment_magic_btn">联系客服</string>
+    <string name="fragment_magic_classic_case">改造案例</string>
+    <string name="fragment_magic_choose_consult">软装指南</string>
+    <string name="fragment_magic_image_case">软装图库</string>
+    <string name="fragment_magic_online_design">在线设计</string>
+    <string name="fragment_magic_classroom">色彩课堂</string>
+    <string name="fragment_magic_diy">DIY搭配</string>
 </resources>
