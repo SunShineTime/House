@@ -9,4 +9,6 @@ public class HttpRequest {
     public static final String HOMEHEADERONEURL = "http://portal-web.zhaidou.com/index/getBoardContent.action?boardCodes=06";
     public static final String HOMEHEADERTWOURL = "http://portal-web.zhaidou.com/index/getBoardContent.action?boardCodes=05";
 
+    public static final String GOODS1 = "http://portal-web.zhaidou.com/index/getSpecialSaleList.action?pageSize=10&pageNo=";
+    public static final String GOODS2 = "&typeEnum=1";
 }
