@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.MainActivity">
+
+
+    <FrameLayout
+        android:id="@+id/main_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/main_height"
+        />
+
+
+    <RadioGroup
+        android:id="@+id/main_radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_height"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        >
+
+        <RadioButton
+            android:id="@+id/main_fragment_home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/home_btn"
+            android:textColor="@drawable/btn_text_color"
+            android:text="@string/fragment_home"
+            android:gravity="center"
+            android:textSize="10sp"
+            android:padding="4dp"
+            />
+        <RadioButton
+            android:id="@+id/main_fragment_goods"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/goods_btn"
+            android:textColor="@drawable/btn_text_color"
+            android:text="@string/fragment_goods"
+            android:gravity="center"
+            android:textSize="10sp"
+            android:padding="4dp"/>
+
+        <RadioButton
+            android:id="@+id/main_fragment_magic"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/magic_btn"
+            android:textColor="@drawable/btn_text_color"
+            android:text="@string/fragment_magic"
+            android:gravity="center"
+            android:textSize="10sp"
+            android:padding="4dp"/>
+
+        <RadioButton
+            android:id="@+id/main_fragment_cart"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/cart_btn"
+            android:textColor="@drawable/btn_text_color"
+            android:text="@string/fragment_cart"
+            android:gravity="center"
+            android:textSize="10sp"
+            android:padding="4dp"/>
+        <RadioButton
+            android:id="@+id/main_fragment_account"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/account_btn"
+            android:textColor="@drawable/btn_text_color"
+            android:text="@string/fragment_account"
+            android:gravity="center"
+            android:textSize="10sp"
+            android:padding="4dp"/>
+
+
+    </RadioGroup>
+</android.support.percent.PercentFrameLayout>

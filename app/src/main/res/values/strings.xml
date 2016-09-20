@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">HouseFinish</string>
+    <string name="fragment_home">首页</string>
+    <string name="fragment_goods">商城</string>
+    <string name="fragment_magic">软装魔法</string>
+    <string name="fragment_cart">购物车</string>
+    <string name="fragment_account">我</string>
+</resources>
