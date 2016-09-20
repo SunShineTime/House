@@ -8,12 +8,10 @@ import android.widget.RadioGroup;
 
 import com.qianfeng.housefinish.R;
 import com.qianfeng.housefinish.fragments.AccountFragment;
-import com.qianfeng.housefinish.fragments.BaseFragment;
 import com.qianfeng.housefinish.fragments.CartFragment;
 import com.qianfeng.housefinish.fragments.GoodsFragment;
 import com.qianfeng.housefinish.fragments.HomeFragment;
 import com.qianfeng.housefinish.fragments.MagicFragment;
-import com.qianfeng.housefinish.ui.BaseActivity;
 
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.ViewInject;
