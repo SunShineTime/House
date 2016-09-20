@@ -34,10 +34,19 @@ public class HomeAdapter extends BaseAdapter {
     }
 
     public void updateRes(List<Home>data){
+        if (data!=null) {
+            this.data.clear();
+            this.data.addAll(data);
+            notifyDataSetChanged();
+        }
 
     }
 
     public void addRes(List<Home>data){
+        if (data!=null) {
+            this.data.addAll(data);
+            notifyDataSetChanged();
+        }
 
     }
 
@@ -73,9 +82,9 @@ public class HomeAdapter extends BaseAdapter {
         }
 
         x.image().bind(holder.image,getItem(position).getMainPic());
-
-
-
+        holder.title.setText(getItem(position).getCaseName());
+        holder.content.setText(getItem(position).getMainDesc());
+        holder.count.setText(getItem(position).getCommentCount());
 
         return convertView;
     }
