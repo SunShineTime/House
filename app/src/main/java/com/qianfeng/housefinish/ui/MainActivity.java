@@ -73,7 +73,6 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
         mCart.setTypeface(mFromAsset);
         mAccount.setTypeface(mFromAsset);
 
-
         mRadioGroup.setOnCheckedChangeListener(this);
         //动态添加Fragment
         FragmentManager fm = getSupportFragmentManager();
