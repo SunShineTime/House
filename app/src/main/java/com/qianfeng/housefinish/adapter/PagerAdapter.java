@@ -2,7 +2,9 @@ package com.qianfeng.housefinish.adapter;
 
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -10,14 +12,20 @@ import java.util.List;
  */
 public  class PagerAdapter extends android.support.v4.view.PagerAdapter{
 
-    private List<View> viewList;
+    private List<ImageView> viewList;
 
-    public PagerAdapter(List<View> viewList) {
-        this.viewList = viewList;
+    public PagerAdapter(List<ImageView> viewList) {
+        if (viewList!=null) {
+            this.viewList = viewList;
+        }else {
+            this.viewList = new ArrayList<>();
+        }
+
     }
 
     @Override
     public int getCount() {
+
         return viewList.size();
     }
 
@@ -28,6 +36,7 @@ public  class PagerAdapter extends android.support.v4.view.PagerAdapter{
 
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
+
         container.removeView(viewList.get(position));
 
     }
@@ -45,7 +54,6 @@ public  class PagerAdapter extends android.support.v4.view.PagerAdapter{
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
         container.addView(viewList.get(position));
-
         return viewList.get(position);
     }
 }

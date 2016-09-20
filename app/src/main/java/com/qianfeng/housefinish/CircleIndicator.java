@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by xiayong on 2015/9/29.
+ * Created by shuying on 2015/9/29.
  */
 public class CircleIndicator extends View {
     private ViewPager viewPager;

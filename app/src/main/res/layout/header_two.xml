@@ -25,7 +25,7 @@
             CircleIndicator:ci_radius="10dp"
             CircleIndicator:ci_gravity="center"
             CircleIndicator:ci_mode="outside"
-            CircleIndicator:ci_selected_background="0xffe6454a"
+            CircleIndicator:ci_selected_background="@color/green"
             CircleIndicator:ci_background="@android:color/white"
             />
     </LinearLayout>

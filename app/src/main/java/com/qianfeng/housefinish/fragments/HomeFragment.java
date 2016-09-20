@@ -2,6 +2,8 @@ package com.qianfeng.housefinish.fragments;
 
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
@@ -32,7 +34,7 @@ import java.util.Random;
 /**
  * 首页
  */
-public class HomeFragment extends BaseFragment {
+public class HomeFragment extends BaseFragment implements Handler.Callback{
 
     public static final String TAG = HomeFragment.class.getSimpleName();
     private ListView mListView;
@@ -42,7 +44,9 @@ public class HomeFragment extends BaseFragment {
     private ImageView mHeaderImage3;
     private ViewPager mViewpage;
     private CircleIndicator mCircleIndicator;
-    private List<View> viewList;
+    private List<ImageView> viewList;
+    private Handler mhandler = new Handler(this);
+    private int page = 0 ;
 
     @Nullable
     @Override
@@ -69,6 +73,9 @@ public class HomeFragment extends BaseFragment {
         mViewpage = ((ViewPager) header2.findViewById(R.id.header_viewpager));
         PagerAdapter adapter = new PagerAdapter(viewList);
         mViewpage.setAdapter(adapter);
+        mhandler.sendEmptyMessage(100);
+
+
         mCircleIndicator = ((CircleIndicator) header2.findViewById(R.id.header_indicator));
         mCircleIndicator.setViewPager(mViewpage);
 
@@ -87,18 +94,19 @@ public class HomeFragment extends BaseFragment {
         this.adapter = new HomeAdapter(getActivity(), null);
         mListView.setAdapter(this.adapter);
 
-
-
     }
 
     private void initPageData() {
-        viewList = new ArrayList<View>();
-        Random random = new Random();
-        for(int i=0;i<3;i++){
-            View view = new View(getActivity());
-            view.setBackgroundColor(0xff000000| random.nextInt(0x00ffffff));
-            viewList.add(view);
-        }
+        viewList = new ArrayList<ImageView>();
+        ImageView imageView1 = new ImageView(getActivity());
+        ImageView imageView2 = new ImageView(getActivity());
+        ImageView imageView3 = new ImageView(getActivity());
+        x.image().bind(imageView1,"http://imgs.zhaidou.com/cms/201608/1470736393135.jpg");
+        x.image().bind(imageView2,"http://imgs.zhaidou.com/cms/201608/1472628961778.jpg");
+        x.image().bind(imageView3,"http://imgs.zhaidou.com/cms/201606/1466481215467.jpg");
+        viewList.add(imageView1);
+        viewList.add(imageView2);
+        viewList.add(imageView3);
     }
 
     //header数据加载
@@ -162,5 +170,20 @@ public class HomeFragment extends BaseFragment {
                 Log.e(TAG, "onFinished: " );
             }
         });
+    }
+
+    @Override
+    public boolean handleMessage(Message msg) {
+
+        switch (msg.what) {
+            case 100:
+                page++;
+                Log.e(TAG, "handleMessage: "+page );
+                mViewpage.setCurrentItem(page%3);
+                mhandler.sendEmptyMessageDelayed(100,3*1000);
+//                mhandler.sendEmptyMessageAtTime(100,3*1000);
+                break;
+        }
+        return false;
     }
 }
