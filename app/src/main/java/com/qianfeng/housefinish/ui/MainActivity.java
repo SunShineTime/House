@@ -1,5 +1,7 @@
 package com.qianfeng.housefinish.ui;
 
+import android.content.res.AssetManager;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -7,6 +9,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.KeyEvent;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.qianfeng.housefinish.R;
@@ -16,6 +19,7 @@ import com.qianfeng.housefinish.fragments.CartFragment;
 import com.qianfeng.housefinish.fragments.GoodsFragment;
 import com.qianfeng.housefinish.fragments.HomeFragment;
 import com.qianfeng.housefinish.fragments.MagicFragment;
+import com.qianfeng.housefinish.utils.ToastUtil;
 
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.ViewInject;
@@ -35,19 +39,40 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
     private static final long DELAY_TIME = 3000;
     @ViewInject(R.id.main_radiogroup)
     private RadioGroup mRadioGroup;
+    @ViewInject(R.id.main_fragment_home)
+    private RadioButton mHome;
+    @ViewInject(R.id.main_fragment_goods)
+    private RadioButton mGoods;
+    @ViewInject(R.id.main_fragment_magic)
+    private RadioButton mMagic;
+    @ViewInject(R.id.main_fragment_cart)
+    private RadioButton mCart;
+    @ViewInject(R.id.main_fragment_account)
+    private RadioButton mAccount;
     private Fragment mFragment;
     private boolean isExit;
     private Handler mHandler=new Handler(this);
+    private AssetManager mAssets;
+    private Typeface mFromAsset;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         x.view().inject(this);
+        mAssets = getAssets();
+        mFromAsset = Typeface.createFromAsset(mAssets, "fonts/kaiti.ttf");
         initView();
         ToastUtil.init(this);
     }
 
     private void initView() {
+        //设置字体
+        mHome.setTypeface(mFromAsset);
+        mGoods.setTypeface(mFromAsset);
+        mMagic.setTypeface(mFromAsset);
+        mCart.setTypeface(mFromAsset);
+        mAccount.setTypeface(mFromAsset);
+
 
         mRadioGroup.setOnCheckedChangeListener(this);
         //动态添加Fragment

@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.qianfeng.housefinish.R;
-import com.qianfeng.housefinish.ui.ToastUtil;
+import com.qianfeng.housefinish.utils.ToastUtil;
 
 /**
  * 软装魔法
