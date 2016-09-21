@@ -11,5 +11,6 @@ public class GoodsRightSecondActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_goods_right_second);
+        //斯蒂芬斯蒂芬方式地方撒
     }
 }
