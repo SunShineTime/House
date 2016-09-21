@@ -57,7 +57,7 @@ public class ChildActivity extends BaseActivity implements PullToRefreshBase.OnR
     }
 
 enum State{
-        DOWN,UP;
+        DOWN,UP
     }
     private void initData(final State state) {
         RequestParams params = new RequestParams(HttpRequest.GOODSCHILD+categoryId+"}&pageNo="+page);
