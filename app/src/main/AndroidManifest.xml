@@ -24,7 +24,8 @@
         <activity android:name=".ui.GoodsEditorActivity">
         </activity>
         <activity android:name=".ui.MagicDIYActivity"/>
-        <activity android:name=".ui.MagicClassicActivity"/>
+        <activity android:name=".ui.MagicClassicActivity">
+        </activity>
     </application>
 
 </manifest>
