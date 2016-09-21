@@ -36,7 +36,7 @@ public class DayDayAwardActivity extends AppCompatActivity implements View.OnCli
         WebSettings webSettings = mWebView.getSettings();
         //设置WebView浏览的客户端
         mWebView.setWebViewClient(mClient);
-        // WebView的加载进度，接收到的信息都存在一个叫WebChromeClient
+        // WebView的加载进度，接收到的信息都存在WebChromeClient
         mWebView.setWebChromeClient(chromeClient);
         mWebView.getProgress();
         //加载网页

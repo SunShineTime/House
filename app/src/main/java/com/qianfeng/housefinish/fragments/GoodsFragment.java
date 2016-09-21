@@ -30,6 +30,7 @@ import com.qianfeng.housefinish.model.BigGoodsList;
 import com.qianfeng.housefinish.model.BigHeadersList;
 import com.qianfeng.housefinish.ui.DayDayAwardActivity;
 import com.qianfeng.housefinish.ui.GoodsEditorActivity;
+import com.qianfeng.housefinish.ui.GoodsEnterActivity;
 import com.qianfeng.housefinish.ui.GoodsRightSecondActivity;
 
 import org.xutils.common.Callback;
@@ -74,6 +75,7 @@ public class GoodsFragment extends BaseFragment implements PullToRefreshBase.OnR
     public LinearLayout mLayoutTwo;
     public LinearLayout mLayoutThree;
     public LinearLayout mLayoutFour;
+    public ImageView mImageMessage;
 
 
     @Nullable
@@ -158,6 +160,8 @@ public class GoodsFragment extends BaseFragment implements PullToRefreshBase.OnR
         mImage.setOnClickListener(this);
         mTextSearch = ((TextView) layout.findViewById(R.id.fragment_goods_text_search));
         mTextSearch.setOnClickListener(this);
+        mImageMessage = (ImageView) layout.findViewById(R.id.fragment_goods_image_left);
+        mImageMessage.setOnClickListener(this);
         //实例化控件
         mPullListView = (PullToRefreshListView) layout.findViewById(R.id.fragment_goods_listview);
         //设置监听
@@ -211,6 +215,10 @@ public class GoodsFragment extends BaseFragment implements PullToRefreshBase.OnR
             case R.id.fragment_goods_text_search:
                 Intent intent1 = new Intent(getActivity(), GoodsEditorActivity.class);
                 startActivity(intent1);
+                break;
+            case R.id.fragment_goods_image_left:
+                Intent intent3 = new Intent(getActivity(), GoodsEnterActivity.class);
+                startActivity(intent3);
                 break;
             case R.id.layout_one:
 

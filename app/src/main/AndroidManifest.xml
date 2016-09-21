@@ -26,6 +26,8 @@
         <activity android:name=".ui.MagicDIYActivity"/>
         <activity android:name=".ui.DayDayAwardActivity">
         </activity>
+        <activity android:name=".ui.GoodsEnterActivity">
+        </activity>
     </application>
 
 </manifest>
