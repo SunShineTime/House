@@ -20,6 +20,7 @@
         android:orientation="horizontal"
         android:layout_height="match_parent">
         <RadioGroup
+            android:id="@+id/goods_left_rb_radiogroup"
             android:layout_width="100dp"
             android:orientation="vertical"
             android:background="#f4f6f6"
@@ -112,15 +113,13 @@
             <RadioButton
                 android:id="@+id/goods_left_rb_sj"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="wrap_content"
                 android:button="@null"
                 android:text="设计"
                 android:gravity="center"
                 android:textColor="@drawable/rg_text_color"
                 android:background="@drawable/rg_bg"
                 />
-
-
         </RadioGroup>
 
         <GridView
