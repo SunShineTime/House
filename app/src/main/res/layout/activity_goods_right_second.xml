@@ -1,150 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.qianfeng.housefinish.ui.GoodsRightSecondActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:layout_height="40dp">
+        android:layout_height="40dp"
+        android:orientation="horizontal">
 
-<ImageView
-    android:layout_width="25dp"
-    android:layout_height="25dp"
-    android:layout_marginLeft="10dp"
-    android:layout_gravity="center_vertical"
-    android:src="@mipmap/ease_mm_title_back"/>
+        <ImageView
+            android:id="@+id/left_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/ease_mm_title_back" />
 
 
-<TextView
-    android:layout_width="match_parent"
-    android:paddingLeft="20dp"
-    android:layout_marginRight="20dp"
-    android:layout_height="30dp"
-    android:layout_gravity="center"
-    android:gravity="center"
-    android:drawableLeft="@mipmap/abc_ic_search_api_holo_light"
-    android:background="@mipmap/editorbg"
-    android:text="软装设计"/>
+        <TextView
+            android:id="@+id/left_search"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="20dp"
+            android:background="@mipmap/editorbg"
+            android:drawableLeft="@mipmap/abc_ic_search_api_holo_light"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:text="软装设计" />
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
         <RadioGroup
             android:id="@+id/goods_left_rb_radiogroup"
             android:layout_width="100dp"
-            android:orientation="vertical"
+            android:layout_height="match_parent"
             android:background="#f4f6f6"
-            android:layout_height="match_parent">
+            android:orientation="vertical">
 
             <RadioButton
                 android:id="@+id/goods_left_rb_jj"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:text="家具"
-                android:gravity="center"
-                android:checked="true"
-                android:textColor="@drawable/rg_text_color"
                 android:background="@drawable/rg_bg"
-                />
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="家具"
+                android:textColor="@drawable/rg_text_color" />
+
             <RadioButton
                 android:id="@+id/goods_left_rb_js"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:text="家饰"
-                android:gravity="center"
-                android:textColor="@drawable/rg_text_color"
                 android:background="@drawable/rg_bg"
-                />
+                android:button="@null"
+                android:gravity="center"
+                android:text="家饰"
+                android:textColor="@drawable/rg_text_color" />
+
             <RadioButton
                 android:id="@+id/goods_left_rb_jf"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:text="家纺"
-                android:gravity="center"
-                android:textColor="@drawable/rg_text_color"
                 android:background="@drawable/rg_bg"
-                />
+                android:button="@null"
+                android:gravity="center"
+                android:text="家纺"
+                android:textColor="@drawable/rg_text_color" />
+
             <RadioButton
                 android:id="@+id/goods_left_rb_sn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:text="收纳"
-                android:gravity="center"
-                android:textColor="@drawable/rg_text_color"
                 android:background="@drawable/rg_bg"
-                />
+                android:button="@null"
+                android:gravity="center"
+                android:text="收纳"
+                android:textColor="@drawable/rg_text_color" />
 
             <RadioButton
                 android:id="@+id/goods_left_rb_ms"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:text="美食"
-                android:gravity="center"
-                android:textColor="@drawable/rg_text_color"
                 android:background="@drawable/rg_bg"
-                />
+                android:button="@null"
+                android:gravity="center"
+                android:text="美食"
+                android:textColor="@drawable/rg_text_color" />
+
             <RadioButton
                 android:id="@+id/goods_left_rb_qj"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:text="清洁"
-                android:gravity="center"
-                android:textColor="@drawable/rg_text_color"
                 android:background="@drawable/rg_bg"
-                />
+                android:button="@null"
+                android:gravity="center"
+                android:text="清洁"
+                android:textColor="@drawable/rg_text_color" />
+
             <RadioButton
                 android:id="@+id/goods_left_rb_yh"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:text="养护"
-                android:gravity="center"
-                android:textColor="@drawable/rg_text_color"
                 android:background="@drawable/rg_bg"
-                />
+                android:button="@null"
+                android:gravity="center"
+                android:text="养护"
+                android:textColor="@drawable/rg_text_color" />
 
             <RadioButton
                 android:id="@+id/goods_left_rb_cc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:text="餐厨"
-                android:gravity="center"
-                android:textColor="@drawable/rg_text_color"
                 android:background="@drawable/rg_bg"
-                />
+                android:button="@null"
+                android:gravity="center"
+                android:text="餐厨"
+                android:textColor="@drawable/rg_text_color" />
 
             <RadioButton
                 android:id="@+id/goods_left_rb_sj"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:text="设计"
-                android:gravity="center"
-                android:textColor="@drawable/rg_text_color"
                 android:background="@drawable/rg_bg"
-                />
+                android:button="@null"
+                android:gravity="center"
+                android:text="设计"
+                android:textColor="@drawable/rg_text_color" />
         </RadioGroup>
 
         <GridView
             android:id="@+id/goods_left_gridview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:numColumns="3"
-            />
+            android:numColumns="3" />
 
     </LinearLayout>
 

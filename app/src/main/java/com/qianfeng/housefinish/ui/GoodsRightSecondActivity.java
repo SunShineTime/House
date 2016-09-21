@@ -1,9 +1,14 @@
 package com.qianfeng.housefinish.ui;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 
 import com.google.gson.Gson;
 import com.qianfeng.housefinish.R;
@@ -19,11 +24,13 @@ import org.xutils.x;
 
 import java.util.List;
 
-public class GoodsRightSecondActivity extends BaseActivity implements RadioGroup.OnCheckedChangeListener {
+public class GoodsRightSecondActivity extends BaseActivity implements RadioGroup.OnCheckedChangeListener, View.OnClickListener, AdapterView.OnItemClickListener {
 
     private RadioGroup mRadioGroup;
     private GridView mGridView;
     private GoodsLeftAdapter adapter;
+    private ImageView mBack;
+    private TextView mSearch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,16 +45,22 @@ public class GoodsRightSecondActivity extends BaseActivity implements RadioGroup
 
 
     private void initView() {
+
+        mBack = (ImageView) findViewById(R.id.left_back);
+        mBack.setOnClickListener(this);
+        mSearch = (TextView) findViewById(R.id.left_search);
+        mSearch.setOnClickListener(this);
+
         mRadioGroup = (RadioGroup) findViewById(R.id.goods_left_rb_radiogroup);
         mRadioGroup.setOnCheckedChangeListener(this);
         mGridView = (GridView) findViewById(R.id.goods_left_gridview);
+        mGridView.setOnItemClickListener(this);
         adapter = new GoodsLeftAdapter(this,null);
         mGridView.setAdapter(adapter);
 
 
     }
     private void initData(final int position) {
-
         RequestParams params = new RequestParams("http://portal-web.zhaidou.com/category/queryCategory.action");
         x.http().get(params, new Callback.CommonCallback<String>() {
             @Override
@@ -76,7 +89,6 @@ public class GoodsRightSecondActivity extends BaseActivity implements RadioGroup
 
             }
         });
-
     }
     @Override
     public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -109,12 +121,27 @@ public class GoodsRightSecondActivity extends BaseActivity implements RadioGroup
                 initData(8);
                 break;
         }
-
-
-
-
     }
 
 
+    @Override
+    public void onClick(View v) {
 
+        switch (v.getId()) {
+            case R.id.left_back:
+                this.finish();
+                break;
+            case R.id.left_search:
+                Intent intent = new Intent(this, GoodsEditorActivity.class);
+                startActivity(intent);
+                break;
+
+        }
+
+    }
+    //GridView的监听事件
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+    }
 }
