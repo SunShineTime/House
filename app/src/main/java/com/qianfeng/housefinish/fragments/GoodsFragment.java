@@ -67,7 +67,8 @@ public class GoodsFragment extends BaseFragment implements PullToRefreshBase.OnR
     TextView textView3;
     TextView textView4;
     private ImageView mImage;
-    private EditText mEditor;
+    private TextView mTextSearch;
+
 
     @Nullable
     @Override
@@ -149,8 +150,8 @@ public class GoodsFragment extends BaseFragment implements PullToRefreshBase.OnR
     private void initView() {
         mImage = ((ImageView) layout.findViewById(R.id.fragment_goods_image_right));
         mImage.setOnClickListener(this);
-        mEditor = ((EditText) layout.findViewById(R.id.fragment_goods_edt));
-        mEditor.setOnClickListener(this);
+        mTextSearch = ((TextView) layout.findViewById(R.id.fragment_goods_text_search));
+        mTextSearch.setOnClickListener(this);
         //实例化控件
         mPullListView = (PullToRefreshListView) layout.findViewById(R.id.fragment_goods_listview);
         //设置监听
@@ -182,11 +183,6 @@ public class GoodsFragment extends BaseFragment implements PullToRefreshBase.OnR
         textView3= ((TextView) mHeaderOne.findViewById(R.id.fragment_goods_listview_head_one_text3));
         textView4= ((TextView) mHeaderOne.findViewById(R.id.fragment_goods_listview_head_one_text4));
         mListView.addHeaderView(mHeaderOne);
-
-
-
-
-
     }
 
     @Override
@@ -196,7 +192,7 @@ public class GoodsFragment extends BaseFragment implements PullToRefreshBase.OnR
                 Intent intent = new Intent(getActivity(), GoodsRightSecondActivity.class);
                 startActivity(intent);
                 break;
-            case R.id.fragment_goods_edt:
+            case R.id.fragment_goods_text_search:
                 Intent intent1 = new Intent(getActivity(), GoodsEditorActivity.class);
                 startActivity(intent1);
                 break;
