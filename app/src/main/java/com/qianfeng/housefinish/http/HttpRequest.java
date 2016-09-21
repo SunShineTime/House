@@ -11,4 +11,6 @@ public class HttpRequest {
 
     public static final String GOODS1 = "http://portal-web.zhaidou.com/index/getSpecialSaleList.action?pageSize=10&pageNo=";
     public static final String GOODS2 = "&typeEnum=1";
+
+//    public static final String
 }
