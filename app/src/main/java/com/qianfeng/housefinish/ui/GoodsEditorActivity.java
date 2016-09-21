@@ -8,7 +8,7 @@ import android.widget.ImageView;
 
 import com.qianfeng.housefinish.R;
 
-public class GoodsEditorActivity extends AppCompatActivity implements View.OnClickListener {
+public class GoodsEditorActivity extends BaseActivity implements View.OnClickListener {
 
     private ImageView mBack;
 

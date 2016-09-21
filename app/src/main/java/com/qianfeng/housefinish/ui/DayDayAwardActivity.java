@@ -1,6 +1,6 @@
 package com.qianfeng.housefinish.ui;
 
-import android.support.v7.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebChromeClient;
@@ -8,13 +8,12 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.ProgressBar;
 
 import com.qianfeng.housefinish.R;
 import com.qianfeng.housefinish.http.HttpRequest;
 
-public class DayDayAwardActivity extends AppCompatActivity implements View.OnClickListener {
+public class DayDayAwardActivity extends BaseActivity implements View.OnClickListener {
 
     public WebView mWebView;
     public Button mBtn;

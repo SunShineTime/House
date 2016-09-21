@@ -7,7 +7,7 @@ import android.widget.Button;
 
 import com.qianfeng.housefinish.R;
 
-public class GoodsEnterActivity extends AppCompatActivity implements View.OnClickListener {
+public class GoodsEnterActivity extends BaseActivity implements View.OnClickListener {
 
     public Button mEnterBack;
 
@@ -19,6 +19,7 @@ public class GoodsEnterActivity extends AppCompatActivity implements View.OnClic
     }
 
     private void initView() {
+
         mEnterBack = (Button) findViewById(R.id.day_day_enter_back);
         mEnterBack.setOnClickListener(this);
     }
@@ -27,7 +28,9 @@ public class GoodsEnterActivity extends AppCompatActivity implements View.OnClic
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.day_day_enter_back:
+
                 finish();
+
                 break;
         }
     }
