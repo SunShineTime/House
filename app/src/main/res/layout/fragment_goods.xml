@@ -20,9 +20,9 @@
         android:layout_weight="6"
         android:layout_height="match_parent"
         android:drawableLeft="@mipmap/abc_ic_search_api_holo_light"
-        android:background="#e9e0e9"
+        android:background="@drawable/text_pressed"
         android:hint="软装设计"
-        android:gravity="center"/>
+        android:paddingLeft="80dp"/>
     <ImageView
         android:id="@+id/fragment_goods_image_left"
         android:layout_width="0dp"
