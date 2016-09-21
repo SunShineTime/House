@@ -1,5 +1,6 @@
 package com.qianfeng.housefinish.ui;
 
+import android.content.Intent;
 import android.content.res.AssetManager;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -103,7 +104,10 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
                 switchPages(CartFragment.TAG, CartFragment.class);
                 break;
             case R.id.main_fragment_account:
-                switchPages(AccountFragment.TAG, AccountFragment.class);
+//                switchPages(AccountFragment.TAG, AccountFragment.class);
+                Intent intent = new Intent(this, GoodsEnterActivity.class);
+                startActivity(intent);
+                mHome.setChecked(true);
                 break;
         }
 

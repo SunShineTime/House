@@ -1,34 +1,36 @@
 package com.qianfeng.housefinish.ui;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
+import android.widget.Button;
 
 import com.qianfeng.housefinish.R;
 
-public class GoodsEditorActivity extends BaseActivity implements View.OnClickListener {
+public class GoodsEnterActivity extends BaseActivity implements View.OnClickListener {
 
-    private ImageView mBack;
+    public Button mEnterBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_goods_editor);
+        setContentView(R.layout.activity_goods_enter);
         initView();
     }
 
     private void initView() {
-        mBack = (ImageView) findViewById(R.id.fragment_goods_image_back);
-        mBack.setOnClickListener(this);
+
+        mEnterBack = (Button) findViewById(R.id.day_day_enter_back);
+        mEnterBack.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.fragment_goods_image_back:
-               finish();
+            case R.id.day_day_enter_back:
+
+                finish();
+
                 break;
         }
     }

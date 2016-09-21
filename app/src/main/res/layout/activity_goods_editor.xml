@@ -24,7 +24,6 @@
             android:layout_height="30dp"
             android:drawableLeft="@mipmap/abc_ic_search_api_holo_light"
             android:hint="软装设计"
-            android:textColor="#e4e1e1"
             android:paddingLeft="20dp"
             android:textSize="12dp"
             android:layout_gravity="center_vertical"

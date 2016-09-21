@@ -33,6 +33,7 @@ public class GoodsAdapter extends BaseAdapter {
             this.data=new ArrayList<>();
         }
     }
+    //上拉加载
     public void addRes(List<Goods> data) {
         if (data!=null) {
             this.data.addAll(data);
@@ -40,7 +41,7 @@ public class GoodsAdapter extends BaseAdapter {
 
         }
     }
-
+//下拉刷新
     public void upData(List<Goods> data) {
         if (data!=null) {
             this.data.clear();

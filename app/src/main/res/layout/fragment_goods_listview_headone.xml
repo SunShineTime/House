@@ -6,6 +6,7 @@
                android:padding="10dp">
 
     <LinearLayout
+        android:id="@+id/layout_one"
         android:layout_width="0dp"
         android:layout_weight="1"
     android:layout_height="wrap_content"
@@ -24,6 +25,7 @@
         android:text="天天刮奖"/>
 </LinearLayout>
     <LinearLayout
+        android:id="@+id/layout_two"
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="wrap_content"
@@ -43,6 +45,7 @@
             android:text="软装图库"/>
     </LinearLayout>
     <LinearLayout
+        android:id="@+id/layout_three"
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="wrap_content"
@@ -61,6 +64,7 @@
             android:text="色彩案例"/>
     </LinearLayout>
     <LinearLayout
+        android:id="@+id/layout_four"
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="wrap_content"
