@@ -26,7 +26,8 @@
         <activity android:name=".ui.ChildActivity"></activity>
         <activity android:name=".ui.GoodsEnterActivity"></activity>
         <activity android:name=".ui.DayDayAwardActivity"></activity>
-
+        <activity android:name=".ui.MagicChooseActivity" />
+        <activity android:name=".ui.MagicOnlineActivity"/>
     </application>
 
 </manifest>

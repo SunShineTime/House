@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-   android:orientation="vertical"
     tools:context="com.qianfeng.housefinish.ui.DayDayAwardActivity">
     <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
@@ -13,7 +12,7 @@
         android:background="@color/white">
 
         <Button
-            android:id="@+id/day_day_image_back"
+            android:id="@+id/magic_online_back"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:drawableLeft="@mipmap/icon_back_gary"
@@ -23,18 +22,17 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:textSize="23sp"
-            android:text="@string/day_day"
+            android:text="@string/magic_online_title"
             android:gravity="center"
             android:layout_gravity="center"
             />
     </android.support.design.widget.CoordinatorLayout>
-    <ProgressBar
-        android:id="@+id/day_day_propressBar"
-        android:layout_width="match_parent"
-        android:layout_height="2dp"/>
+
 <WebView
 
-    android:id="@+id/day_day_webview"
+    android:id="@+id/magic_online_webview"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"/>
-</LinearLayout>
+    android:layout_height="match_parent">
+
+</WebView>
+</FrameLayout>

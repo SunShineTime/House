@@ -12,8 +12,11 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.qianfeng.housefinish.R;
+import com.qianfeng.housefinish.ui.GoodsEnterActivity;
+import com.qianfeng.housefinish.ui.MagicChooseActivity;
 import com.qianfeng.housefinish.ui.MagicClassicActivity;
 import com.qianfeng.housefinish.ui.MagicDIYActivity;
+import com.qianfeng.housefinish.ui.MagicOnlineActivity;
 import com.qianfeng.housefinish.utils.ToastUtil;
 
 /**
@@ -78,7 +81,9 @@ public class MagicFragment extends BaseFragment implements View.OnClickListener 
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.magic_kefu:
-                ToastUtil.toast("请先登录");
+//                ToastUtil.toast("请先登录");
+                Intent login = new Intent(getActivity(), GoodsEnterActivity.class);
+                startActivity(login);
                 break;
             case R.id.magic_classic_case:
 //                ToastUtil.toast(""+mClassic.getText());
@@ -86,13 +91,17 @@ public class MagicFragment extends BaseFragment implements View.OnClickListener 
                 startActivity(classic);
                 break;
             case R.id.magic_choose_consult:
-                ToastUtil.toast(""+mChoose.getText());
+//                ToastUtil.toast(""+mChoose.getText());
+                Intent choose = new Intent(getActivity(), MagicChooseActivity.class);
+                startActivity(choose);
                 break;
             case R.id.magic_image_case:
                 ToastUtil.toast(""+mImage.getText());
                 break;
             case R.id.magic_online_design:
-                ToastUtil.toast(""+mOnline.getText());
+//                ToastUtil.toast(""+mOnline.getText());
+                Intent online = new Intent(getActivity(), MagicOnlineActivity.class);
+                startActivity(online);
                 break;
             case R.id.magic_classroom:
                 ToastUtil.toast(""+mClassroom.getText());
