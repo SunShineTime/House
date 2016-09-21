@@ -13,7 +13,7 @@ import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 
 /**
- * Created by Administrator on 16-9-21.
+ * DIY页面
  */
 
 @ContentView(R.layout.magic_diy_activity)

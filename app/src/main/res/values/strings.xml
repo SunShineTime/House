@@ -16,4 +16,5 @@
     <string name="fragment_magic_classroom">色彩课堂</string>
     <string name="fragment_magic_diy">DIY搭配</string>
     <string name="magic_diy_title">DIY</string>
+    <string name="magic_classic_title">改造案例</string>
 </resources>

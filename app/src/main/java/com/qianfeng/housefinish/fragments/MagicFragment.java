@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.qianfeng.housefinish.R;
+import com.qianfeng.housefinish.ui.MagicClassicActivity;
 import com.qianfeng.housefinish.ui.MagicDIYActivity;
 import com.qianfeng.housefinish.utils.ToastUtil;
 
@@ -80,7 +81,9 @@ public class MagicFragment extends BaseFragment implements View.OnClickListener 
                 ToastUtil.toast("请先登录");
                 break;
             case R.id.magic_classic_case:
-                ToastUtil.toast(""+mClassic.getText());
+//                ToastUtil.toast(""+mClassic.getText());
+                Intent classic = new Intent(getActivity(), MagicClassicActivity.class);
+                startActivity(classic);
                 break;
             case R.id.magic_choose_consult:
                 ToastUtil.toast(""+mChoose.getText());
@@ -95,9 +98,9 @@ public class MagicFragment extends BaseFragment implements View.OnClickListener 
                 ToastUtil.toast(""+mClassroom.getText());
                 break;
             case R.id.magic_diy:
-                ToastUtil.toast(""+mDiy.getText());
-                Intent intent = new Intent(getActivity(), MagicDIYActivity.class);
-                startActivity(intent);
+//                ToastUtil.toast(""+mDiy.getText());
+                Intent diy = new Intent(getActivity(), MagicDIYActivity.class);
+                startActivity(diy);
                 break;
         }
     }
