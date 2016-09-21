@@ -43,7 +43,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_margin="5dp"
         android:background="#e4e1e1">
         <TextView
             android:layout_width="match_parent"
@@ -53,113 +52,161 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
             android:orientation="horizontal">
-            <TextView
+            <Button
                 android:id="@+id/search_text1"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:gravity="center"
+                android:background="@drawable/search"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:textColor="#a19c9c"
                 android:text="北欧"/>
-            <TextView
+            <Button
                 android:id="@+id/search_text2"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:gravity="center"
+                android:background="@drawable/search"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:textColor="#a19c9c"
                 android:text="美式"/>
-            <TextView
+            <Button
                 android:id="@+id/search_text3"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:gravity="center"
+                android:background="@drawable/search"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:textColor="#a19c9c"
                 android:text="茶几"/>
-            <TextView
+            <Button
                 android:id="@+id/search_text4"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:gravity="center"
+                android:background="@drawable/search"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:textColor="#a19c9c"
                 android:text="收纳柜"/>
-            <TextView
+            <Button
                 android:id="@+id/search_text5"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:gravity="center"
+                android:background="@drawable/search"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:textColor="#a19c9c"
                 android:text="灯"/>
 
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
             android:orientation="horizontal">
-            <TextView
+            <Button
                 android:id="@+id/search_text6"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:gravity="center"
+                android:background="@drawable/search"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:textColor="#a19c9c"
                 android:text="花艺"/>
-            <TextView
+            <Button
                 android:id="@+id/search_text7"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:gravity="center"
+                android:background="@drawable/search"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:textColor="#a19c9c"
                 android:text="四件套"/>
-            <TextView
+            <Button
                 android:id="@+id/search_text8"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:gravity="center"
+                android:background="@drawable/search"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:textColor="#a19c9c"
                 android:text="抱枕"/>
-            <TextView
+            <Button
                 android:id="@+id/search_text9"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:gravity="center"
+                android:background="@drawable/search"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:textColor="#a19c9c"
                 android:text="纯棉"/>
-            <TextView
+            <Button
                 android:id="@+id/search_text10"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:gravity="center"
-
+                android:background="@drawable/search"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:textColor="#a19c9c"
                 android:text="明星···"/>
 
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_margin="10dp">
-            <TextView
+            android:orientation="horizontal">
+            <Button
                 android:id="@+id/search_text13"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:gravity="center"
+                android:background="@drawable/search"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:textColor="#a19c9c"
                 android:text="马克杯"/>
-            <TextView
+            <Button
                 android:id="@+id/search_text14"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:gravity="center"
+                android:background="@drawable/search"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:textColor="#a19c9c"
                 android:text="餐盘"/>
-            <TextView
+            <Button
                 android:id="@+id/search_text15"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:gravity="center"
+                android:background="@drawable/search"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:textColor="#a19c9c"
                 android:text="香薰···"/>
             <TextView
                 android:layout_width="0dp"
