@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -27,6 +28,7 @@ import com.qianfeng.housefinish.http.HttpRequest;
 import com.qianfeng.housefinish.lunbo.AutoScrollViewPager;
 import com.qianfeng.housefinish.model.BigGoodsList;
 import com.qianfeng.housefinish.model.BigHeadersList;
+import com.qianfeng.housefinish.ui.DayDayAwardActivity;
 import com.qianfeng.housefinish.ui.GoodsEditorActivity;
 import com.qianfeng.housefinish.ui.GoodsRightSecondActivity;
 
@@ -68,6 +70,10 @@ public class GoodsFragment extends BaseFragment implements PullToRefreshBase.OnR
     TextView textView4;
     private ImageView mImage;
     private TextView mTextSearch;
+    private LinearLayout mLayoutOne;
+    public LinearLayout mLayoutTwo;
+    public LinearLayout mLayoutThree;
+    public LinearLayout mLayoutFour;
 
 
     @Nullable
@@ -183,6 +189,16 @@ public class GoodsFragment extends BaseFragment implements PullToRefreshBase.OnR
         textView3= ((TextView) mHeaderOne.findViewById(R.id.fragment_goods_listview_head_one_text3));
         textView4= ((TextView) mHeaderOne.findViewById(R.id.fragment_goods_listview_head_one_text4));
         mListView.addHeaderView(mHeaderOne);
+
+        mLayoutOne = (LinearLayout)layout.findViewById(R.id.layout_one);
+        mLayoutOne.setOnClickListener(this);
+        mLayoutTwo = ((LinearLayout) layout.findViewById(R.id.layout_two));
+        mLayoutTwo.setOnClickListener(this);
+        mLayoutThree = ((LinearLayout) layout.findViewById(R.id.layout_three));
+        mLayoutThree.setOnClickListener(this);
+        mLayoutFour = ((LinearLayout) layout.findViewById(R.id.layout_four));
+        mLayoutFour.setOnClickListener(this);
+
     }
 
     @Override
@@ -195,6 +211,19 @@ public class GoodsFragment extends BaseFragment implements PullToRefreshBase.OnR
             case R.id.fragment_goods_text_search:
                 Intent intent1 = new Intent(getActivity(), GoodsEditorActivity.class);
                 startActivity(intent1);
+                break;
+            case R.id.layout_one:
+
+                break;
+            case R.id.layout_two:
+
+                break;
+            case R.id.layout_three:
+                Intent intent2 = new Intent(getActivity(), DayDayAwardActivity.class);
+                startActivity(intent2);
+                break;
+            case R.id.layout_four:
+
                 break;
         }
     }

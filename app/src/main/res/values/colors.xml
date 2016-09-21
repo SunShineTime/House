@@ -8,5 +8,6 @@
     <color name="white">#ffffff</color>
     <color name="bian">#999999</color>
     <color name="green">#38BBBA</color>
+    <color name="color_button">#00000000</color>
 
 </resources>
