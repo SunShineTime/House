@@ -4,12 +4,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.qianfeng.housefinish.R;
 
 public class GoodsEnterActivity extends BaseActivity implements View.OnClickListener {
 
-    public Button mEnterBack;
+    public TextView mEnterBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +21,7 @@ public class GoodsEnterActivity extends BaseActivity implements View.OnClickList
 
     private void initView() {
 
-        mEnterBack = (Button) findViewById(R.id.day_day_enter_back);
+        mEnterBack = (TextView) findViewById(R.id.day_day_enter_back);
         mEnterBack.setOnClickListener(this);
     }
 

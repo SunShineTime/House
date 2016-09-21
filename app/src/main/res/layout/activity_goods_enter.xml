@@ -12,7 +12,7 @@
         android:elevation="@dimen/elevation_height"
         android:background="@color/white">
 
-        <Button
+        <TextView
             android:id="@+id/day_day_enter_back"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -22,7 +22,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:textSize="23sp"
+            android:textSize="20sp"
             android:text="@string/enter"
             android:gravity="center"
             android:layout_gravity="center"/>
