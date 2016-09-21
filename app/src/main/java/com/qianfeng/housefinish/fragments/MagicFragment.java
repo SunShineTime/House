@@ -29,6 +29,8 @@ public class MagicFragment extends BaseFragment implements View.OnClickListener 
     private Button mDiy;
     private Button mKeFu;
 
+
+    //
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
