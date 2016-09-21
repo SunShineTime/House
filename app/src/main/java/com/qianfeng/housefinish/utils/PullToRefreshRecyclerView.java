@@ -48,19 +48,20 @@ public class PullToRefreshRecyclerView extends PullToRefreshBase<RecyclerView> {
      */
     @Override
     protected boolean isReadyForPullEnd() {
-        //获取刷新的View
         RecyclerView refreshableView = getRefreshableView();
-        //获取RecyclerView中的第一项
-        View child = refreshableView.getChildAt(0);
-        //获取RecyclerView的内边距
-        int paddingTop = refreshableView.getPaddingTop();
-        //获取child的顶部外边距
-        MarginLayoutParams layoutParams = (MarginLayoutParams) child.getLayoutParams();
-        int topMargin = layoutParams.topMargin;
-        //获取第一个item距离顶部的距离
-        int top = child.getTop();
+        View child = refreshableView.getChildAt(refreshableView.getChildCount() - 1);
+        //获取Recycler高度
+        int height = refreshableView.getHeight();
+        int paddingBottom = refreshableView.getPaddingBottom();
+        MarginLayoutParams params = (MarginLayoutParams) child.getLayoutParams();
+        int bottomMargin = params.bottomMargin;
+        int bottom = child.getBottom();
 
-        return top==paddingTop+topMargin;
+        // 添加一个判断条件 获取一下RecyclerView的Adapter中的item条数
+        int itemCount = refreshableView.getAdapter().getItemCount();
+        // 计算最后一个view在适配器中的位置
+        int childAdapterPosition = refreshableView.getChildAdapterPosition(child);
+        return height==paddingBottom+bottomMargin+bottom&&itemCount==childAdapterPosition+1;
     }
 
 
