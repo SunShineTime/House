@@ -142,6 +142,9 @@ public class GoodsRightSecondActivity extends BaseActivity implements RadioGroup
     //GridView的监听事件
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+        String categoryId = adapter.getItem(position).getCategoryId();
+        Intent intent = new Intent(this, ChildActivity.class);
+        intent.putExtra("categoryId",categoryId);
+        startActivity(intent);
     }
 }
