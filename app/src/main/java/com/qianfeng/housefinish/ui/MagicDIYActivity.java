@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 
 import com.qianfeng.housefinish.R;
 
@@ -16,7 +15,6 @@ import org.xutils.x;
  * DIY页面
  */
 
-@ContentView(R.layout.magic_diy_activity)
 public class MagicDIYActivity extends BaseActivity implements View.OnClickListener {
 
     @ViewInject(R.id.magic_diy_back)
@@ -25,6 +23,7 @@ public class MagicDIYActivity extends BaseActivity implements View.OnClickListen
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.magic_diy_activity);
         x.view().inject(this);
         initView();
     }

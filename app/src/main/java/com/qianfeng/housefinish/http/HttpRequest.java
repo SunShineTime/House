@@ -15,5 +15,6 @@ public class HttpRequest {
     public static final String DAYDAY = "http://www.zhaidou.com/lotteries?open=app";
 
 
-//    public static final String
+    public static final String MAGICCLASSIC="http://portal-web.zhaidou.com/decorate/getChangeCases.action?pageSize=20&pageNo=";
+
 }
