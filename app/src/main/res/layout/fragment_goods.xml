@@ -14,15 +14,18 @@
         android:layout_height="match_parent"
         android:layout_margin="10dp"
         android:src="@mipmap/icon_goods_category"/>
-    <EditText
-        android:id="@+id/fragment_goods_edt"
+    <TextView
+        android:id="@+id/fragment_goods_text_search"
         android:layout_width="0dp"
         android:layout_weight="6"
         android:layout_height="match_parent"
         android:drawableLeft="@mipmap/abc_ic_search_api_holo_light"
-        android:background="#e9e0e9"
+        android:background="@drawable/text_pressed"
         android:hint="软装设计"
-        android:gravity="center"/>
+        android:textSize="12dp"
+        android:textColor="#e4e1e1"
+        android:gravity="center_vertical"
+        android:paddingLeft="80dp"/>
     <ImageView
         android:id="@+id/fragment_goods_image_left"
         android:layout_width="0dp"
