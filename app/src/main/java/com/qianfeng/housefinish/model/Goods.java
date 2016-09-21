@@ -1,15 +1,20 @@
 package com.qianfeng.housefinish.model;
 
+import org.xutils.db.annotation.Table;
+
 /**
  * Created by chengchao on 2016/9/20.
  */
+
 public class Goods {
+
     private String activityCode;
     private String activityName;
     private String discountLabel;
     private String mainPic;
     private String startTime;
     private String endTime;
+
 
     public String getActivityCode() {
         return activityCode;

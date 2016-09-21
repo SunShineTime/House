@@ -1,5 +1,8 @@
 package com.qianfeng.housefinish.model;
 
+import org.xutils.db.annotation.Column;
+import org.xutils.db.annotation.Table;
+
 import java.util.List;
 
 /**
@@ -89,13 +92,15 @@ public class HeaderOne {
         public void setProgramPOList(List<ProgramPOListBean> programPOList) {
             this.programPOList = programPOList;
         }
-
+        @Table(name = "header")
         public static class ProgramPOListBean {
             private String name;
             private String type;
             private String url;
+            @Column(name = "pictureUrl")
             private String pictureUrl;
             private String price;
+            @Column(name = "code",isId = true,autoGen = true)
             private String code;
 
             public String getName() {
