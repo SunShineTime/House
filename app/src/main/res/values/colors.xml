@@ -9,5 +9,6 @@
     <color name="bian">#999999</color>
     <color name="green">#38BBBA</color>
     <color name="touming">#00000000</color>
-
+    <color name="red">#D93F3C</color>
+    <color name="huise">#B7B7B7</color>
 </resources>
