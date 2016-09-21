@@ -45,7 +45,7 @@
     android:layout_gravity="center"
     android:background="@drawable/fragemnt_magic_btn"
     android:layout_marginTop="@dimen/magic_btn_height"
-    android:textColor="@color/text"
+    android:textColor="@color/green"
     android:text="@string/fragment_magic_btn"
     android:drawableRight="@mipmap/icon_arrow_right_green"
     android:paddingLeft="15dp"
