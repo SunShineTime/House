@@ -15,4 +15,5 @@
     <string name="fragment_magic_online_design">在线设计</string>
     <string name="fragment_magic_classroom">色彩课堂</string>
     <string name="fragment_magic_diy">DIY搭配</string>
+    <string name="magic_diy_title">DIY</string>
 </resources>

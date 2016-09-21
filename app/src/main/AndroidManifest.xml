@@ -23,6 +23,7 @@
         </activity>
         <activity android:name=".ui.GoodsEditorActivity">
         </activity>
+        <activity android:name=".ui.MagicDIYActivity"/>
     </application>
 
 </manifest>

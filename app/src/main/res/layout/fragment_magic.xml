@@ -71,7 +71,7 @@
             android:background="@drawable/magic_btn_selector"
             android:drawableTop="@mipmap/icon_magic_classic_case"
             android:drawablePadding="5dp"
-            android:padding="20dp"
+            android:padding="10dp"
             android:text="@string/fragment_magic_classic_case"
             />
         <Button
@@ -82,7 +82,7 @@
             android:background="@drawable/magic_btn_selector"
             android:drawableTop="@mipmap/icon_magic_choose_consult"
             android:drawablePadding="5dp"
-            android:padding="20dp"
+            android:padding="10dp"
             android:text="@string/fragment_magic_choose_consult"
             />
     </LinearLayout>
@@ -101,7 +101,7 @@
             android:background="@drawable/magic_btn_selector"
             android:drawableTop="@mipmap/icon_magic_image_case"
             android:drawablePadding="5dp"
-            android:padding="20dp"
+            android:padding="10dp"
             android:text="@string/fragment_magic_image_case"
             />
         <Button
@@ -112,7 +112,7 @@
             android:background="@drawable/magic_btn_selector"
             android:drawableTop="@mipmap/icon_magic_online_design"
             android:drawablePadding="5dp"
-            android:padding="20dp"
+            android:padding="10dp"
             android:text="@string/fragment_magic_online_design"
             />
     </LinearLayout>
@@ -131,7 +131,7 @@
             android:background="@drawable/magic_btn_selector"
             android:drawableTop="@mipmap/icon_magic_classroom"
             android:drawablePadding="5dp"
-            android:padding="20dp"
+            android:padding="10dp"
             android:text="@string/fragment_magic_classroom"
             />
         <Button
@@ -142,7 +142,7 @@
             android:background="@drawable/magic_btn_selector"
             android:drawableTop="@mipmap/icon_magic_diy"
             android:drawablePadding="5dp"
-            android:padding="20dp"
+            android:padding="10dp"
             android:text="@string/fragment_magic_diy"
             />
     </LinearLayout>

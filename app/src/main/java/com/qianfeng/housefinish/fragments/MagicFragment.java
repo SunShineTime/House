@@ -1,6 +1,7 @@
 package com.qianfeng.housefinish.fragments;
 
 
+import android.content.Intent;
 import android.content.res.AssetManager;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -11,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.qianfeng.housefinish.R;
+import com.qianfeng.housefinish.ui.MagicDIYActivity;
 import com.qianfeng.housefinish.utils.ToastUtil;
 
 /**
@@ -75,7 +77,7 @@ public class MagicFragment extends BaseFragment implements View.OnClickListener 
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.magic_kefu:
-                ToastUtil.toast(""+mKeFu.getText());
+                ToastUtil.toast("请先登录");
                 break;
             case R.id.magic_classic_case:
                 ToastUtil.toast(""+mClassic.getText());
@@ -94,6 +96,8 @@ public class MagicFragment extends BaseFragment implements View.OnClickListener 
                 break;
             case R.id.magic_diy:
                 ToastUtil.toast(""+mDiy.getText());
+                Intent intent = new Intent(getActivity(), MagicDIYActivity.class);
+                startActivity(intent);
                 break;
         }
     }

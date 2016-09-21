@@ -14,4 +14,5 @@
     <dimen name="magic_btn_height_three">155dp</dimen>
     <dimen name="main_radio_height">50dp</dimen>
     <dimen name="goods_height">40dp</dimen>
+    <dimen name="elevation_height">1dp</dimen>
 </resources>
