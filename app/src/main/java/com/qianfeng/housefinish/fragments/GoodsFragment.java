@@ -250,10 +250,10 @@ public class GoodsFragment extends BaseFragment implements PullToRefreshBase.OnR
 //                    Log.e(TAG, "onSuccess: "+list.getData().getThemeList() );
                     switch (state) {
                     case  DOWN:
-                        adapter.addRes(list.getData().getThemeList());
+                        adapter.upData(list.getData().getThemeList());
                         break;
                     case UP:
-                        adapter.upData(list.getData().getThemeList());
+                        adapter.addRes(list.getData().getThemeList());
                         break;
                 }
             }
