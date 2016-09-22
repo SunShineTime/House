@@ -29,6 +29,8 @@ import com.qianfeng.housefinish.http.HttpRequest;
 import com.qianfeng.housefinish.lunbo.AutoScrollViewPager;
 import com.qianfeng.housefinish.model.BigGoodsList;
 import com.qianfeng.housefinish.model.BigHeadersList;
+import com.qianfeng.housefinish.model.Goods;
+import com.qianfeng.housefinish.model.GoodsList;
 import com.qianfeng.housefinish.ui.DayDayAwardActivity;
 import com.qianfeng.housefinish.ui.GoodsEditorActivity;
 import com.qianfeng.housefinish.ui.GoodsEnterActivity;
@@ -79,7 +81,8 @@ public class GoodsFragment extends BaseFragment implements PullToRefreshBase.OnR
     public LinearLayout mLayoutFour;
     public ImageView mImageMessage;
     public String code;
-
+    //新建集合添加解析的数据
+      private  List<Goods> list2=new ArrayList();
 
     @Nullable
     @Override
@@ -241,10 +244,14 @@ public class GoodsFragment extends BaseFragment implements PullToRefreshBase.OnR
         }
     }
 
+
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        Log.e(TAG, "onItemClick: "+position +id);
-        code = list.getData().getThemeList().get((int) id).getActivityCode();
+//        Log.e(TAG, "onItemClick: "+position +"---------------"+id);
+//        code = list.getData().getThemeList().get(position-3).getActivityCode();
+        //获取需要传递的值
+        code=list2.get(position).getActivityCode();
+//        Log.e(TAG, "onItemClick: "+code );
         Intent intent = new Intent(getActivity(), GoodsItemActivity.class);
         intent.putExtra("code",code);
         startActivity(intent);
@@ -262,12 +269,15 @@ public class GoodsFragment extends BaseFragment implements PullToRefreshBase.OnR
                 Gson gson=new Gson();
                 list = gson.fromJson(result, BigGoodsList.class);
 //                    Log.e(TAG, "onSuccess: "+list.getData().getThemeList() );
+                List<Goods> themeList = list.getData().getThemeList();
+                list2.addAll(themeList);
                     switch (state) {
                     case  DOWN:
-                        adapter.upData(list.getData().getThemeList());
+
+                        adapter.upData(themeList);
                         break;
                     case UP:
-                        adapter.addRes(list.getData().getThemeList());
+                        adapter.addRes(themeList);
                         break;
                 }
             }
