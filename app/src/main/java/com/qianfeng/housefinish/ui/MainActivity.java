@@ -102,9 +102,12 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
                 break;
             case R.id.main_fragment_cart:
                 switchPages(CartFragment.TAG, CartFragment.class);
+                Intent intent1 = new Intent(this, GoodsEnterActivity.class);
+                startActivity(intent1);
+                mHome.setChecked(true);
                 break;
             case R.id.main_fragment_account:
-//                switchPages(AccountFragment.TAG, AccountFragment.class);
+                switchPages(AccountFragment.TAG, AccountFragment.class);
                 Intent intent = new Intent(this, GoodsEnterActivity.class);
                 startActivity(intent);
                 mHome.setChecked(true);

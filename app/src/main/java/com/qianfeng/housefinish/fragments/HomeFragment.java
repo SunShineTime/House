@@ -1,6 +1,7 @@
 package com.qianfeng.housefinish.fragments;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -22,6 +23,7 @@ import com.qianfeng.housefinish.http.HttpRequest;
 import com.qianfeng.housefinish.model.BigHomeList;
 import com.qianfeng.housefinish.model.HeaderOne;
 import com.qianfeng.housefinish.model.Home;
+import com.qianfeng.housefinish.ui.GoodsEnterActivity;
 
 import org.xutils.DbManager;
 import org.xutils.common.Callback;
@@ -36,7 +38,7 @@ import java.util.Random;
 /**
  * 首页
  */
-public class HomeFragment extends BaseFragment implements Handler.Callback{
+public class HomeFragment extends BaseFragment implements Handler.Callback, View.OnClickListener {
 
     public static final String TAG = HomeFragment.class.getSimpleName();
     private ListView mListView;
@@ -52,6 +54,7 @@ public class HomeFragment extends BaseFragment implements Handler.Callback{
     private DbManager mDb;
     //缓存管理器
     protected DbManager.DaoConfig daoConfig = new DbManager.DaoConfig().setDbName("zhaidou").setDbVersion(1);
+    public ImageView mHomeEnter;
 
     @Nullable
     @Override
@@ -69,6 +72,8 @@ public class HomeFragment extends BaseFragment implements Handler.Callback{
 
     private void initView() {
         mListView = (ListView) layout.findViewById(R.id.homefragment_listview);
+        mHomeEnter = (ImageView) layout.findViewById(R.id.home_enter);
+        mHomeEnter.setOnClickListener(this);
 
         //添加header ViewPage
         View header2 = LayoutInflater.from(getActivity()).inflate(R.layout.header_two, null);
@@ -231,5 +236,15 @@ public class HomeFragment extends BaseFragment implements Handler.Callback{
                 break;
         }
         return false;
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.home_enter:
+                Intent intent = new Intent(getActivity(), GoodsEnterActivity.class);
+                startActivity(intent);
+                break;
+        }
     }
 }
