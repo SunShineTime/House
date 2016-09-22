@@ -8,19 +8,21 @@
         <LinearLayout
             android:id="@+id/goods_layout"
             android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:orientation="horizontal"
         android:background="@color/green">
         <ImageView
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
             android:src="@mipmap/icon_inform_white"/>
         <TextView
             android:layout_width="0dp"
             android:layout_weight="5"
             android:layout_height="wrap_content"
             android:text="限时限量 疯狂抢购"
+            android:layout_gravity="center_vertical"
             android:textColor="@color/white"/>
         <ImageView
             android:layout_width="0dp"
@@ -32,6 +34,7 @@
             android:layout_width="0dp"
             android:layout_weight="6"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
             android:text="剩余14天23时22分12秒"
             android:textColor="@color/white"/>
     </LinearLayout>
@@ -132,11 +135,11 @@
             <Button
                 android:id="@+id/goods_item_shopping"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:text="马上抢"
                 android:textColor="@color/white"
                 android:layout_marginLeft="60dp"
-                android:background="@color/red"/>
+                android:background="@drawable/btn_shopping"/>
         </LinearLayout>
     </LinearLayout>
     </LinearLayout>

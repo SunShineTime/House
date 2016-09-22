@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
@@ -39,6 +40,7 @@ public class GoodsItemActivity extends BaseActivity implements PullToRefreshBase
     public TextView mContent;
     public TextView mBack;
     public FloatingActionButton mFab;
+    public ImageView mShare;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +55,8 @@ public class GoodsItemActivity extends BaseActivity implements PullToRefreshBase
         mBack.setOnClickListener(this);
         mFab = (FloatingActionButton) findViewById(R.id.goods_fab);
         mFab.setOnClickListener(this);
+        mShare = (ImageView) findViewById(R.id.goods_item_share);
+        mShare.setOnClickListener(this);
         intent = getIntent();
         code = intent.getStringExtra("code");
 //        Log.e(TAG, "initView: "+code );
@@ -77,6 +81,9 @@ public class GoodsItemActivity extends BaseActivity implements PullToRefreshBase
             case R.id.goods_fab:
                 Intent intent = new Intent(this, GoodsEnterActivity.class);
                 startActivity(intent);
+                break;
+            case R.id.goods_item_share:
+                Toast.makeText(GoodsItemActivity.this, "马上去分享", Toast.LENGTH_SHORT).show();
                 break;
         }
     }
