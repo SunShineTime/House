@@ -28,6 +28,7 @@
         <activity android:name=".ui.DayDayAwardActivity"></activity>
         <activity android:name=".ui.MagicChooseActivity" />
         <activity android:name=".ui.MagicOnlineActivity"/>
+        <activity android:name=".ui.MagicChooseChildActivity"/>
     </application>
 
 </manifest>

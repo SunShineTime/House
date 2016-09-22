@@ -1,24 +1,20 @@
 package com.qianfeng.housefinish.ui;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
-import android.view.ViewGroup;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
-import android.widget.FrameLayout;
-import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 
 import com.qianfeng.housefinish.R;
 import com.qianfeng.housefinish.http.HttpRequest;
+import com.qianfeng.housefinish.utils.ToastUtil;
 
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
@@ -27,14 +23,14 @@ import org.xutils.x;
  * 软装魔法页面
  */
 
-public class MagicChooseActivity extends BaseActivity implements View.OnClickListener {
+public class MagicChooseChildActivity extends BaseActivity implements View.OnClickListener {
 
-    private static final String TAG = MagicChooseActivity.class.getSimpleName();
-    @ViewInject(R.id.magic_choose_back)
+    private static final String TAG = MagicChooseChildActivity.class.getSimpleName();
+    @ViewInject(R.id.magic_choose_child_back)
     private Button mBack;
-    @ViewInject(R.id.magic_choose_propressBar)
+    @ViewInject(R.id.magic_choose_child_propressBar)
     private ProgressBar mProgressBar;
-    @ViewInject(R.id.magic_choose_webview)
+    @ViewInject(R.id.magic_choose_child_webview)
     private WebView mWeb;
     //获取WebView 客户端
     private WebViewClient mClient = new WebViewClient();
@@ -57,7 +53,7 @@ public class MagicChooseActivity extends BaseActivity implements View.OnClickLis
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.magic_choose_activity);
+        setContentView(R.layout.magic_choose_child_activity);
         x.view().inject(this);
         initView();
     }
@@ -73,26 +69,11 @@ public class MagicChooseActivity extends BaseActivity implements View.OnClickLis
         //加载网页
 
         //设置WebView浏览的客户端
-        mWeb.setWebViewClient(new WebViewClient(){
-
-
-            //设置web跳转activity，回退时还在当前的页面
-            @Override
-            public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                if (url.equals("http://m.zhaidou.com/decorate/guide?source=android")) {
-                    //false是默认不拦截当前的web加载，默认模式
-                    return false;
-                }else {
-                    Intent intent = new Intent(getApplication(), MagicChooseChildActivity.class);
-                    intent.putExtra("url", url);
-                    startActivity(intent);
-                    //true是拦截当前的web加载
-                    return true;
-                }
-
-            }
-        });
-        mWeb.loadUrl(HttpRequest.MAGICCHOOSE);
+        mWeb.setWebViewClient(mClient);
+        Intent intent = getIntent();
+        String url = intent.getExtras().getString("url");
+//        ToastUtil.toast(""+url);
+        mWeb.loadUrl(url);
 
 
 

@@ -2,12 +2,15 @@ package com.qianfeng.housefinish.ui;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 import com.qianfeng.housefinish.R;
 import com.qianfeng.housefinish.http.HttpRequest;
@@ -58,10 +61,37 @@ public class MagicOnlineActivity extends BaseActivity implements View.OnClickLis
         mWeb.setWebChromeClient(chromeClient);
         //加载网页
         mWeb.loadUrl(HttpRequest.MAGICONLINE);
+
     }
 
     @Override
     public void onClick(View v) {
-        finish();
+        //判断WebView是否可回退
+        if (mWeb.canGoBack()) {
+            //进行返回
+            mWeb.goBack();
+        } else {
+            finish();
+        }
+    }
+
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        //判断按下的按钮是否是返回键
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            //判断WebView是否可回退
+            if (mWeb.canGoBack()) {
+                mWeb.goBack();
+                //判断是否可前进
+//                mWebView.canGoForward();
+                return true;
+            } else {
+                finish();
+                return true;
+            }
+        }
+
+        return super.onKeyDown(keyCode, event);
     }
 }

@@ -6,33 +6,40 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/main_height"
         android:elevation="@dimen/elevation_height"
-        android:background="@color/touming">
+        android:background="@color/white">
 
         <Button
-            android:id="@+id/magic_choose_back"
+            android:id="@+id/magic_choose_child_back"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:drawableLeft="@mipmap/icon_back"
+            android:drawableLeft="@mipmap/icon_back_gary"
             android:background="@color/touming"
-            android:text="@string/magic_choose_back"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            android:padding="13dp"
-            android:layout_marginLeft="5dp"/>
+            android:layout_marginLeft="15dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="23sp"
+            android:text="@string/magic_choose_child_title"
+            android:gravity="center"
+            android:layout_gravity="center"
+            />
+
 
     </android.support.design.widget.CoordinatorLayout>
 
 
     <WebView
 
-        android:id="@+id/magic_choose_webview"
+        android:id="@+id/magic_choose_child_webview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/main_height"/>
 
     <ProgressBar
-        android:id="@+id/magic_choose_propressBar"
+        android:id="@+id/magic_choose_child_propressBar"
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:progressDrawable="@drawable/progress"/>
+        android:progressDrawable="@drawable/progress"
+        android:layout_marginTop="@dimen/main_height"/>
 </FrameLayout>

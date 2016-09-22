@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/main_height"
         android:elevation="@dimen/elevation_height"
-        android:background="@color/white">
+        android:background="@color/touming">
 
         <Button
             android:id="@+id/magic_online_back"
@@ -18,14 +18,6 @@
             android:drawableLeft="@mipmap/icon_back_gary"
             android:background="@color/touming"
             android:layout_marginLeft="15dp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:textSize="23sp"
-            android:text="@string/magic_online_title"
-            android:gravity="center"
-            android:layout_gravity="center"
-            />
     </android.support.design.widget.CoordinatorLayout>
 
 <WebView
