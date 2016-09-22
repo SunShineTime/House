@@ -6,7 +6,9 @@ import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.widget.EditText;
 import android.widget.GridView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
@@ -22,14 +24,18 @@ import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;
 import org.xutils.x;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class ChildActivity extends BaseActivity implements PullToRefreshBase.OnRefreshListener2{
+public class ChildActivity extends BaseActivity implements PullToRefreshBase.OnRefreshListener2, ChildAdapter.OnChildClickListener {
     private String categoryId;
     private PullToRefreshRecyclerView mRefresh;
     private RecyclerView mRecycler;
     private ChildAdapter childAdapter;
     private int page = 1;
+    private EditText mEdittext;
+    private  List<Proud> items;
+    private List<Proud> list= new ArrayList<>();
 
 
     @Override
@@ -48,15 +54,32 @@ public class ChildActivity extends BaseActivity implements PullToRefreshBase.OnR
     private void initView() {
         mRefresh = (PullToRefreshRecyclerView) findViewById(R.id.child_refresh);
         mRefresh.setOnRefreshListener(this);
+        mEdittext = (EditText) findViewById(R.id.child_activity_edittext);
+
         mRecycler = mRefresh.getRefreshableView();
         GridLayoutManager layout = new GridLayoutManager(this,2);
         mRefresh.setMode(PullToRefreshBase.Mode.BOTH);
         mRecycler.setLayoutManager(layout);
         childAdapter = new ChildAdapter(this, null);
         mRecycler.setAdapter(childAdapter);
+        childAdapter.setListener(this);
     }
 
-enum State{
+    @Override
+    public void onChildClick(int position) {
+//        Toast.makeText(ChildActivity.this, ""+position, Toast.LENGTH_SHORT).show();
+
+        Intent intent = new Intent(this, DetailsActivity.class);
+        intent.putExtra("price",list.get(position).getPrice());
+        intent.putExtra("oldprice",list.get(position).getMarketingPrice());
+        intent.putExtra("img",list.get(position).getProductPicUrl());
+        intent.putExtra("product",list.get(position).getProductId());
+        startActivity(intent);
+
+
+    }
+
+    enum State{
         DOWN,UP
     }
     private void initData(final State state) {
@@ -68,7 +91,12 @@ enum State{
                 BigProudList bigProudList = gson.fromJson(result, BigProudList.class);
                 BigProudList.DataBean data = bigProudList.getData();
                 ProudList pagePO = data.getPagePO();
-                List<Proud> items = pagePO.getItems();
+                items = pagePO.getItems();
+
+                if (!list.contains(items)) {
+                    list.addAll(items);
+                }
+
 
                 switch (state) {
                     case DOWN:
