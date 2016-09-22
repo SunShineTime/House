@@ -40,7 +40,6 @@ public class MagicChooseActivity extends BaseActivity implements View.OnClickLis
     private WebViewClient mClient = new WebViewClient();
     // WebChromClient客户端
     private WebChromeClient chromeClient = new WebChromeClient() {
-
         @Override
         public void onProgressChanged(WebView view, int newProgress) {
             super.onProgressChanged(view, newProgress);

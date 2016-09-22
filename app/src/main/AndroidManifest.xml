@@ -38,6 +38,7 @@
         <activity android:name=".ui.MagicChooseActivity" />
         <activity android:name=".ui.MagicOnlineActivity"/>
         <activity android:name=".ui.MagicChooseChildActivity"/>
+        <activity android:name=".ui.MagicImageActivity"/>
     </application>
 
 </manifest>
