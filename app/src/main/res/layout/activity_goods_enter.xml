@@ -40,12 +40,21 @@
             android:layout_gravity="center_vertical"
             android:src="@mipmap/icon_login_account"/>
         <EditText
+            android:id="@+id/enter_edt1"
             android:layout_width="0dp"
             android:layout_weight="9"
             android:layout_height="wrap_content"
             android:hint="手机/邮箱"
             android:textSize="12sp"
             android:padding="10dp"/>
+        <ImageView
+            android:id="@+id/enter_edt1_clear"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:visibility="invisible"
+            android:src="@mipmap/ease_search_clear_pressed"/>
     </LinearLayout>
 <LinearLayout
     android:layout_width="match_parent"
@@ -59,12 +68,21 @@
         android:layout_gravity="center_vertical"
         android:src="@mipmap/icon_login_psd"/>
     <EditText
+        android:id="@+id/enter_edt2"
         android:layout_width="0dp"
         android:layout_weight="9"
         android:layout_height="wrap_content"
         android:hint="密码"
         android:textSize="12sp"
         android:padding="10dp"/>
+    <ImageView
+        android:id="@+id/enter_edt2_clear"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:visibility="invisible"
+        android:src="@mipmap/ease_search_clear_pressed"/>
 </LinearLayout>
 
     <Button
