@@ -16,6 +16,9 @@ public class HttpRequest {
 
 
     public static final String MAGICCLASSIC = "http://portal-web.zhaidou.com/decorate/getChangeCases.action?pageSize=20&pageNo=";
+    public static final String GOODSITEM1 = "http://portal-web.zhaidou.com/index/getActivityProductList.action?activityCode=";
+    public static final String GOODSITEM2 = "&pageNo=1&typeEnum=1";
+    public static final String MAGICCLASSIC = "http://portal-web.zhaidou.com/decorate/getChangeCases.action?pageSize=20&pageNo=";
     public static final String MAGICCHOOSE = "http://m.zhaidou.com/rzzh/list.html";
     public static final String MAGICONLINE = "http://m.zhaidou.com/design.html";
 }
