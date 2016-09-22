@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_height"
+        android:elevation="@dimen/elevation_height"
+        android:background="@color/touming">
+
+        <Button
+            android:id="@+id/magic_choose_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@mipmap/icon_back"
+            android:background="@color/touming"
+            android:text="@string/magic_choose_back"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:padding="13dp"
+            android:layout_marginLeft="5dp"/>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+    <WebView
+
+        android:id="@+id/magic_choose_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <ProgressBar
+        android:id="@+id/magic_choose_propressBar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:progressDrawable="@drawable/progress"/>
+</FrameLayout>

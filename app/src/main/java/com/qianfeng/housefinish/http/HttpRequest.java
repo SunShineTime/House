@@ -1,7 +1,7 @@
 package com.qianfeng.housefinish.http;
 
 /**
- * Created by 徐余璟 on 2016/9/20.
+ * 常量类
  */
 public class HttpRequest {
 
@@ -15,6 +15,10 @@ public class HttpRequest {
     public static final String DAYDAY = "http://www.zhaidou.com/lotteries?open=app";
 
 
-    public static final String MAGICCLASSIC="http://portal-web.zhaidou.com/decorate/getChangeCases.action?pageSize=20&pageNo=";
-
+    public static final String MAGICCLASSIC = "http://portal-web.zhaidou.com/decorate/getChangeCases.action?pageSize=20&pageNo=";
+    public static final String GOODSITEM1 = "http://portal-web.zhaidou.com/index/getActivityProductList.action?activityCode=";
+    public static final String GOODSITEM2 = "&pageNo=1&typeEnum=1";
+    public static final String MAGICCHOOSE = "http://m.zhaidou.com/rzzh/list.html";
+    public static final String MAGICONLINE = "http://m.zhaidou.com/design.html";
+    public static final String MAGICIMAGE="http://portal-web.zhaidou.com/decorate/getSoftDecorateStyles.action";
 }

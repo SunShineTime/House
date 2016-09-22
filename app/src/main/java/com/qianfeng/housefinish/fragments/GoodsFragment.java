@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -28,9 +29,12 @@ import com.qianfeng.housefinish.http.HttpRequest;
 import com.qianfeng.housefinish.lunbo.AutoScrollViewPager;
 import com.qianfeng.housefinish.model.BigGoodsList;
 import com.qianfeng.housefinish.model.BigHeadersList;
+import com.qianfeng.housefinish.model.Goods;
+import com.qianfeng.housefinish.model.GoodsList;
 import com.qianfeng.housefinish.ui.DayDayAwardActivity;
 import com.qianfeng.housefinish.ui.GoodsEditorActivity;
 import com.qianfeng.housefinish.ui.GoodsEnterActivity;
+import com.qianfeng.housefinish.ui.GoodsItemActivity;
 import com.qianfeng.housefinish.ui.GoodsRightSecondActivity;
 
 import org.xutils.common.Callback;
@@ -43,7 +47,7 @@ import java.util.List;
 /**
  * 商城
  */
-public class GoodsFragment extends BaseFragment implements PullToRefreshBase.OnRefreshListener2, View.OnClickListener {
+public class GoodsFragment extends BaseFragment implements PullToRefreshBase.OnRefreshListener2, View.OnClickListener, AdapterView.OnItemClickListener {
 
     public static final String TAG = GoodsFragment.class.getSimpleName();
     private PullToRefreshListView mPullListView;
@@ -76,7 +80,9 @@ public class GoodsFragment extends BaseFragment implements PullToRefreshBase.OnR
     public LinearLayout mLayoutThree;
     public LinearLayout mLayoutFour;
     public ImageView mImageMessage;
-
+    public String code;
+    //新建集合添加解析的数据
+      private  List<Goods> list2=new ArrayList();
 
     @Nullable
     @Override
@@ -169,6 +175,8 @@ public class GoodsFragment extends BaseFragment implements PullToRefreshBase.OnR
         //获取ListView
         mListView = mPullListView.getRefreshableView();
         mPullListView.setMode(PullToRefreshBase.Mode.BOTH);
+        //设置监听
+        mListView.setOnItemClickListener(this);
          //修改下拉加载的View
         ILoadingLayout start = mPullListView.getLoadingLayoutProxy(true, false);
 
@@ -236,6 +244,19 @@ public class GoodsFragment extends BaseFragment implements PullToRefreshBase.OnR
         }
     }
 
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//        Log.e(TAG, "onItemClick: "+position +"---------------"+id);
+//        code = list.getData().getThemeList().get(position-3).getActivityCode();
+        //获取需要传递的值
+        code=list2.get(position).getActivityCode();
+//        Log.e(TAG, "onItemClick: "+code );
+        Intent intent = new Intent(getActivity(), GoodsItemActivity.class);
+        intent.putExtra("code",code);
+        startActivity(intent);
+    }
+
     enum State{
         DOWN,UP
     }
@@ -248,12 +269,15 @@ public class GoodsFragment extends BaseFragment implements PullToRefreshBase.OnR
                 Gson gson=new Gson();
                 list = gson.fromJson(result, BigGoodsList.class);
 //                    Log.e(TAG, "onSuccess: "+list.getData().getThemeList() );
+                List<Goods> themeList = list.getData().getThemeList();
+                list2.addAll(themeList);
                     switch (state) {
                     case  DOWN:
-                        adapter.upData(list.getData().getThemeList());
+
+                        adapter.upData(themeList);
                         break;
                     case UP:
-                        adapter.addRes(list.getData().getThemeList());
+                        adapter.addRes(themeList);
                         break;
                 }
             }

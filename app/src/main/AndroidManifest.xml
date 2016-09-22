@@ -19,10 +19,28 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ui.GoodsRightSecondActivity"/>
+        <activity android:name=".ui.GoodsEditorActivity"/>
+        <activity android:name=".ui.MagicDIYActivity"/>
+        <activity android:name=".ui.MagicClassicActivity"/>
+        <activity android:name=".ui.ChildActivity"/>
+        <activity android:name=".ui.GoodsEnterActivity"/>
+        <activity android:name=".ui.DayDayAwardActivity"/>
+        <activity android:name=".ui.GoodsItemActivity">
+        </activity>
+        <activity android:name=".ui.GoodsRightSecondActivity"></activity>
+        <activity android:name=".ui.GoodsEditorActivity"></activity>
         <activity android:name=".ui.GoodsRightSecondActivity" />
         <activity android:name=".ui.GoodsEditorActivity" />
         <activity android:name=".ui.MagicDIYActivity" />
         <activity android:name=".ui.MagicClassicActivity" />
+        <activity android:name=".ui.ChildActivity"></activity>
+        <activity android:name=".ui.GoodsEnterActivity"></activity>
+        <activity android:name=".ui.DayDayAwardActivity"></activity>
+        <activity android:name=".ui.MagicChooseActivity" />
+        <activity android:name=".ui.MagicOnlineActivity"/>
+        <activity android:name=".ui.MagicChooseChildActivity"/>
+        <activity android:name=".ui.MagicImageActivity"/>
         <activity android:name=".ui.ChildActivity" />
         <activity android:name=".ui.GoodsEnterActivity" />
         <activity android:name=".ui.DayDayAwardActivity" />

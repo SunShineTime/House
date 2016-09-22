@@ -44,7 +44,7 @@
                 android:id="@+id/child_money"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/huise"
+                android:textColor="@color/bian"
                 android:textSize="12sp"
                 android:text="￥"/>
             <TextView
@@ -52,13 +52,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@+id/child_money"
-                android:textColor="@color/huise"
+                android:textColor="@color/bian"
                 android:textSize="12sp"
                 android:text="1788"/>
             <View
                 android:layout_width="40dp"
                 android:layout_height="1dp"
-                android:background="@color/huise"
+                android:background="@color/bian"
                 android:layout_centerVertical="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true" />

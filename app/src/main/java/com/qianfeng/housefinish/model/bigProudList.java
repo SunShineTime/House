@@ -1,7 +1,5 @@
 package com.qianfeng.housefinish.model;
 
-import java.util.List;
-
 /**
  * Created by 徐余璟 on 2016/9/21.
  */
