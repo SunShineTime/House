@@ -16,6 +16,7 @@ import com.qianfeng.housefinish.ui.GoodsEnterActivity;
 import com.qianfeng.housefinish.ui.MagicChooseActivity;
 import com.qianfeng.housefinish.ui.MagicClassicActivity;
 import com.qianfeng.housefinish.ui.MagicDIYActivity;
+import com.qianfeng.housefinish.ui.MagicImageActivity;
 import com.qianfeng.housefinish.ui.MagicOnlineActivity;
 import com.qianfeng.housefinish.utils.ToastUtil;
 
@@ -96,7 +97,9 @@ public class MagicFragment extends BaseFragment implements View.OnClickListener 
                 startActivity(choose);
                 break;
             case R.id.magic_image_case:
-                ToastUtil.toast(""+mImage.getText());
+//                ToastUtil.toast(""+mImage.getText());
+                Intent image = new Intent(getActivity(), MagicImageActivity.class);
+                startActivity(image);
                 break;
             case R.id.magic_online_design:
 //                ToastUtil.toast(""+mOnline.getText());

@@ -21,10 +21,16 @@ import java.util.List;
 /**
  * Created by 徐余璟 on 2016/9/21.
  */
-public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ViewHolder> {
+public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ViewHolder> implements View.OnClickListener {
 
     private List<Proud> data;
     private LayoutInflater inflater;
+    private RecyclerView mRecyclerView;
+    private OnChildClickListener listener;
+
+    public void setListener(OnChildClickListener listener) {
+        this.listener = listener;
+    }
 
     public ChildAdapter(Context context, List<Proud> data) {
         inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -65,6 +71,8 @@ public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ViewHolder> 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = inflater.inflate(R.layout.goods_child_item, parent, false);
+        itemView.setOnClickListener(this);
+
         return new ViewHolder(itemView);
     }
 
@@ -82,6 +90,20 @@ public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ViewHolder> 
 
     }
 
+    @Override
+    public void onAttachedToRecyclerView(RecyclerView recyclerView) {
+        super.onAttachedToRecyclerView(recyclerView);
+        mRecyclerView = recyclerView;
+    }
+
+    @Override
+    public void onClick(View v) {
+        int position =  mRecyclerView.getChildAdapterPosition(v);
+        if (listener!=null) {
+            listener.onChildClick(position);
+        }
+
+    }
 
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
@@ -100,6 +122,12 @@ public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ViewHolder> 
             x.view().inject(this,itemView);
 
         }
+    }
+
+    public  interface OnChildClickListener{
+
+        void onChildClick(int position);
+
     }
 
 }

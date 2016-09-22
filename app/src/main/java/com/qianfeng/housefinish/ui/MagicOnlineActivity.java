@@ -55,6 +55,7 @@ public class MagicOnlineActivity extends BaseActivity implements View.OnClickLis
         mBack.setOnClickListener(this);
         //获取浏览器设置
         WebSettings webSettings = mWeb.getSettings();
+        webSettings.setJavaScriptEnabled(true);
         //设置WebView浏览的客户端
         mWeb.setWebViewClient(mClient);
         // WebView的加载进度，接收到的信息都存在WebChromeClient

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:padding="10dp"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0元特卖，不支持退货、退款。\n
+            普通特卖，可退货或退款。\n
+            1. 商品没有质量问题，支持7天无理由退货，但需要用户承担运费。\n
+            2. 物流问题造成货品损伤的，可以申请退货或退款，运费由宅豆承担。\n
+            退款流程：\n
+            普通特卖退货、退款，在订单管理中申请售后，确定是退款还是退货，联系客服确认商品有无损伤，说明退货原因，用户用快递退回商品，没有质量问题的退货需用户承担运费，有质量问题或者物流造成货品损伤的运费由宅豆承担。\n
+            客服时间：9:30—21:00\n"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_marginTop="15dp"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:drawableRight="@mipmap/icon_long_arrow_right"
+        android:text="在线联系客服"/>
+
+</LinearLayout>

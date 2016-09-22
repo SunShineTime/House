@@ -33,6 +33,7 @@ public class DayDayAwardActivity extends BaseActivity implements View.OnClickLis
         mProgress = (ProgressBar) findViewById(R.id.day_day_propressBar);
         //获取浏览器设置
         WebSettings webSettings = mWebView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
         //设置WebView浏览的客户端
         mWebView.setWebViewClient(mClient);
         // WebView的加载进度，接收到的信息都存在WebChromeClient
