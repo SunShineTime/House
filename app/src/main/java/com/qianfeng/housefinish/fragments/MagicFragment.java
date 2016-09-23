@@ -11,12 +11,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.qianfeng.housefinish.ui.MagicClassroomActivity;
+import com.qianfeng.housefinish.ui.MagicImagesActivity;
 import com.qianfeng.housefinish.R;
 import com.qianfeng.housefinish.ui.GoodsEnterActivity;
 import com.qianfeng.housefinish.ui.MagicChooseActivity;
 import com.qianfeng.housefinish.ui.MagicClassicActivity;
 import com.qianfeng.housefinish.ui.MagicDIYActivity;
-import com.qianfeng.housefinish.ui.MagicImageActivity;
 import com.qianfeng.housefinish.ui.MagicOnlineActivity;
 import com.qianfeng.housefinish.utils.ToastUtil;
 
@@ -98,7 +99,7 @@ public class MagicFragment extends BaseFragment implements View.OnClickListener 
                 break;
             case R.id.magic_image_case:
 //                ToastUtil.toast(""+mImage.getText());
-                Intent image = new Intent(getActivity(), MagicImageActivity.class);
+                Intent image = new Intent(getActivity(), MagicImagesActivity.class);
                 startActivity(image);
                 break;
             case R.id.magic_online_design:
@@ -107,7 +108,9 @@ public class MagicFragment extends BaseFragment implements View.OnClickListener 
                 startActivity(online);
                 break;
             case R.id.magic_classroom:
-                ToastUtil.toast(""+mClassroom.getText());
+//                ToastUtil.toast(""+mClassroom.getText());
+                Intent classroom = new Intent(getActivity(), MagicClassroomActivity.class);
+                startActivity(classroom);
                 break;
             case R.id.magic_diy:
 //                ToastUtil.toast(""+mDiy.getText());

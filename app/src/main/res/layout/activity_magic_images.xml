@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.qianfeng.housefinish.ui.MagicClassicActivity">
+    tools:context=".ui.MagicImagesActivity">
+
     <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/main_height"
@@ -34,4 +35,6 @@
         android:id="@+id/magic_images_listview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
+
+
 </LinearLayout>

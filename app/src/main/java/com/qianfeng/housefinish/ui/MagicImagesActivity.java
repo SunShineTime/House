@@ -1,7 +1,7 @@
 package com.qianfeng.housefinish.ui;
 
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -17,18 +17,12 @@ import com.qianfeng.housefinish.model.MagicImageList;
 
 import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;
-import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 
+public class MagicImagesActivity extends AppCompatActivity implements View.OnClickListener,PullToRefreshListView.OnRefreshListener2 {
 
-/**
- * 软装图库页面
- */
-@ContentView(R.layout.magic_images_activity)
-public class MagicImageActivity extends BaseActivity implements View.OnClickListener, PullToRefreshBase.OnRefreshListener2 {
-
-    private static final String TAG = MagicImageActivity.class.getCanonicalName();
+    private static final String TAG = MagicImagesActivity.class.getCanonicalName();
     @ViewInject(R.id.magic_images_back)
     private Button mBack;
     @ViewInject(R.id.magic_images_listview)
@@ -37,25 +31,25 @@ public class MagicImageActivity extends BaseActivity implements View.OnClickList
     private MagicImageAdapter mAdapter;
 
     @Override
-    public void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_magic_images);
         x.view().inject(this);
         initView();
-//        setupView();
+        setupView();
     }
+
 
     private void initView() {
         mBack.setOnClickListener(this);
-        mListView = mRefresh.getRefreshableView();
-        mRefresh.setMode(PullToRefreshBase.Mode.PULL_FROM_START);
+        mListView=mRefresh.getRefreshableView();
         mRefresh.setOnRefreshListener(this);
-        mAdapter = new MagicImageAdapter(this, null);
+        mAdapter = new MagicImageAdapter(this,null);
         mListView.setAdapter(mAdapter);
 
     }
 
     private void setupView() {
-
         RequestParams params = new RequestParams(HttpRequest.MAGICIMAGE);
         x.http().get(params, new Callback.CommonCallback<String>() {
             @Override
@@ -63,6 +57,7 @@ public class MagicImageActivity extends BaseActivity implements View.OnClickList
                 Log.e(TAG, "onSuccess: " + result);
                 Gson gson = new Gson();
                 MagicImageList list = gson.fromJson(result, MagicImageList.class);
+                Log.e(TAG, "onSuccess: " + list);
                 mAdapter.updateRes(list.getData());
 
             }
@@ -79,6 +74,7 @@ public class MagicImageActivity extends BaseActivity implements View.OnClickList
 
             @Override
             public void onFinished() {
+
                 mRefresh.onRefreshComplete();
             }
         });
