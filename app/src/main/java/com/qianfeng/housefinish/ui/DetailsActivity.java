@@ -9,11 +9,13 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewParent;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.qianfeng.housefinish.R;
@@ -30,12 +32,14 @@ import org.xutils.x;
 
 import java.lang.reflect.InvocationTargetException;
 import java.text.DecimalFormat;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
 
-public class DetailsActivity extends BaseActivity implements RadioGroup.OnCheckedChangeListener {
+public class DetailsActivity extends BaseActivity implements RadioGroup.OnCheckedChangeListener, View.OnClickListener {
 
+    private static final String TAG = DetailsActivity.class.getSimpleName();
     private ImageView mMainImage;
     private TextView mTitle;
     private TextView mPrice;
@@ -55,6 +59,10 @@ public class DetailsActivity extends BaseActivity implements RadioGroup.OnChecke
     private View mLeftLine;
     private View mRightLine;
     private Fragment mShowFragment;
+    private boolean ischeck;
+    private boolean ischeck2;
+    private int mID;
+    private int mID2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -178,14 +186,19 @@ public class DetailsActivity extends BaseActivity implements RadioGroup.OnChecke
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         layoutParams.setMargins(10,0,10,0);
 
+        int id = 0;
         for (String string : color.values()) {
             TextView textView = new TextView(DetailsActivity.this);
             textView.setText(string);
             textView.setBackgroundResource(R.mipmap.item_01);
             textView.setGravity(Gravity.CENTER);
             textView.setLayoutParams(layoutParams);
+            textView.setId(id);
+            id++;
+            textView.setOnClickListener(this);
             mName1More.addView(textView);
         }
+
 
         for (String string : size.values()) {
             TextView textView = new TextView(DetailsActivity.this);
@@ -193,6 +206,9 @@ public class DetailsActivity extends BaseActivity implements RadioGroup.OnChecke
             textView.setBackgroundResource(R.mipmap.item_01);
             textView.setGravity(Gravity.CENTER);
             textView.setLayoutParams(layoutParams);
+            textView.setId(id);
+            id++;
+            textView.setOnClickListener(this);
             mName2More.addView(textView);
         }
 
@@ -252,4 +268,61 @@ public class DetailsActivity extends BaseActivity implements RadioGroup.OnChecke
     }
 
 
+    @Override
+    public void onClick(View v) {
+
+
+        switch (((LinearLayout) v.getParent()).getId()) {
+            case R.id.details_name1_more:
+
+
+                if (mID!=v.getId()) {
+                    TextView view = (TextView) findViewById(mID);
+                    view.setBackgroundResource(R.mipmap.item_01);
+                    ischeck = false;
+                    Log.e(TAG, "onClick: 不是同一个控件" );
+                }
+                if (!ischeck) {
+                    v.setBackgroundResource(R.mipmap.item02);
+                    ischeck = true;
+                    Log.e(TAG, "onClick:当前控件 " );
+                }else {
+                    v.setBackgroundResource(R.mipmap.item_01);
+                    ischeck = false;
+                    Log.e(TAG, "onClick: " );
+                }
+                mID = v.getId();
+
+                break;
+            case R.id.details_name2_more:
+
+
+                if (mID2!=v.getId()) {
+                    TextView view2 = (TextView) findViewById(mID2);
+                    view2.setBackgroundResource(R.mipmap.item_01);
+                    ischeck2 = false;
+                    Log.e(TAG, "onClick: 不是同一个控件" );
+                }
+                if (!ischeck2) {
+                    v.setBackgroundResource(R.mipmap.item02);
+                    ischeck2 = true;
+                    Log.e(TAG, "onClick:当前控件 " );
+                }else {
+                    v.setBackgroundResource(R.mipmap.item_01);
+                    ischeck2 = false;
+                    Log.e(TAG, "onClick: " );
+                }
+                mID2 = v.getId();
+
+
+                break;
+        }
+
+
+
+
+
+//        String s = ((TextView) v).getText().toString();
+//        Toast.makeText(DetailsActivity.this, s, Toast.LENGTH_SHORT).show();
+    }
 }

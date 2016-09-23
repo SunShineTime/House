@@ -55,7 +55,8 @@ public class DetailsLeftFragment extends BaseFragment{
     public void onEvent(ActivityToFragment event){
         images = event.getImages();
 
-        ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        params.setMargins(0,20,0,0);
 
         if (images!=null&&images.size()!=0) {
             for (int i = 0; i < images.size(); i++) {
@@ -64,8 +65,6 @@ public class DetailsLeftFragment extends BaseFragment{
                 imageView.setLayoutParams(params);
                 mLineL.addView(imageView);
             }
-
-
         }else {
             Toast.makeText(getActivity(), "数据没有传过来", Toast.LENGTH_SHORT).show();
         }
