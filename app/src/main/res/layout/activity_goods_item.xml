@@ -47,6 +47,7 @@
         android:textSize="16sp"
         android:lineSpacingExtra="5dp"
         android:textStyle="normal"
+         android:visibility="gone"
         android:text="内容"/>
     <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"

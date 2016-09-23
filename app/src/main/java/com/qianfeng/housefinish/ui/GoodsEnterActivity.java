@@ -21,40 +21,41 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.qianfeng.housefinish.R;
+import com.qianfeng.housefinish.utils.ClearEditText;
 
 public class GoodsEnterActivity extends BaseActivity implements View.OnClickListener {
 
     private static final String TAG = GoodsEnterActivity.class.getSimpleName();
     public TextView mEnterBack;
     public Button mLogin;
-    public EditText mEdt1;
-    public EditText mEdt2;
-    public ImageView mClear1;
-    public ImageView mClear2;
-    private TextWatcher watcher=new TextWatcher() {
-        @Override
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-            Log.e(TAG, "beforeTextChanged: " );
-        }
+    public ClearEditText mEdt1;
+    public ClearEditText mEdt2;
 
-        @Override
-        public void onTextChanged(CharSequence s, int start, int before, int count) {
-            Log.e(TAG, "onTextChanged: " );
-        }
 
-        @Override
-        public void afterTextChanged(Editable s) {
-            Log.e(TAG, "afterTextChanged: " );
-            if (s.toString().length()==0) {
-                mClear1.setVisibility(View.INVISIBLE);
-
-            }else {
-                mClear1.setVisibility(View.VISIBLE);
-
-            }
-
-        }
-    };
+//    private TextWatcher watcher=new TextWatcher() {
+//        @Override
+//        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+//            Log.e(TAG, "beforeTextChanged: " );
+//        }
+//
+//        @Override
+//        public void onTextChanged(CharSequence s, int start, int before, int count) {
+//            Log.e(TAG, "onTextChanged: " );
+//        }
+//
+//        @Override
+//        public void afterTextChanged(Editable s) {
+//            Log.e(TAG, "afterTextChanged: " );
+//            if (s.toString().length()==0) {
+//                mClear1.setVisibility(View.INVISIBLE);
+//
+//            }else {
+//                mClear1.setVisibility(View.VISIBLE);
+//
+//            }
+//
+//        }
+//    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,14 +70,12 @@ public class GoodsEnterActivity extends BaseActivity implements View.OnClickList
         mEnterBack.setOnClickListener(this);
         mLogin = (Button) findViewById(R.id.my_login);
         mLogin.setOnClickListener(this);
-        mEdt1 = (EditText) findViewById(R.id.enter_edt1);
-        mEdt2 = (EditText) findViewById(R.id.enter_edt2);
-        mClear1 = (ImageView) findViewById(R.id.enter_edt1_clear);
-        mClear1.setOnClickListener(this);
-        mClear2 = (ImageView) findViewById(R.id.enter_edt2_clear);
-        mClear2.setOnClickListener(this);
-        mEdt1.addTextChangedListener(watcher);
-        mEdt2.addTextChangedListener(watcher);
+        mEdt1 = (ClearEditText) findViewById(R.id.enter_edt1);
+        mEdt2 = (ClearEditText) findViewById(R.id.enter_edt2);
+
+
+//        mEdt1.addTextChangedListener(watcher);
+//        mEdt2.addTextChangedListener(watcher);
 
     }
 
@@ -100,12 +99,12 @@ public class GoodsEnterActivity extends BaseActivity implements View.OnClickList
                     }
                 }
                 break;
-            case R.id.enter_edt1_clear:
-                mEdt1.getText().clear();
-                break;
-            case R.id.enter_edt2_clear:
-                mEdt2.getText().clear();
-                break;
+//            case R.id.enter_edt1_clear:
+//                mEdt1.getText().clear();
+//                break;
+//            case R.id.enter_edt2_clear:
+//                mEdt2.getText().clear();
+//                break;
                 }
         }
 }

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.qianfeng.housefinish.ui.SearchShopActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/goods_height"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+        <ImageView
+            android:id="@+id/fragment_goods_search_back"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:src="@mipmap/icon_back_gary"/>
+
+        <EditText
+            android:id="@+id/fragment_goods_search"
+            android:layout_width="0dp"
+            android:layout_weight="8"
+            android:layout_height="30dp"
+            android:drawableLeft="@mipmap/abc_ic_search_api_holo_light"
+            android:hint="软装设计"
+            android:paddingLeft="20dp"
+            android:textSize="12dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/text_pressed"/>
+
+        <ImageView
+            android:id="@+id/fragment_goods_image_order"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:src="@mipmap/icon_sort"/>
+    </LinearLayout>
+</LinearLayout>

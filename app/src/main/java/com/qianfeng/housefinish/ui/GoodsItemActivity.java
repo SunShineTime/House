@@ -41,6 +41,8 @@ public class GoodsItemActivity extends BaseActivity implements PullToRefreshBase
     public TextView mBack;
     public FloatingActionButton mFab;
     public ImageView mShare;
+    public View mHeader;
+    public TextView mText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,7 +67,11 @@ public class GoodsItemActivity extends BaseActivity implements PullToRefreshBase
         mPull.setOnRefreshListener(this);
         mListView = mPull.getRefreshableView();
         mPull.setMode(PullToRefreshBase.Mode.BOTH);
+   //添加头布局
+        mHeader = getLayoutInflater().inflate(R.layout.header_view,null);
+        mText = ((TextView) mHeader.findViewById(R.id.goods_item_content_text));
 
+        mListView.addHeaderView(mHeader);
         //创建适配器
         adapter = new GoodsItemAdapter(this,null);
         mListView.setAdapter(adapter);
@@ -105,9 +111,9 @@ public class GoodsItemActivity extends BaseActivity implements PullToRefreshBase
                 mTitle = (TextView) findViewById(R.id.goods_item_title);
                 //设置标题数据
                 mTitle.setText(list.getData().getActivityPO().getActivityName());
-                mContent = ((TextView)findViewById(R.id.goods_item_content));
-                mContent.setText(list.getData().getActivityPO().getDescription());
-
+//                mContent = ((TextView)findViewById(R.id.goods_item_content));
+//                mContent.setText(list.getData().getActivityPO().getDescription());
+                mText.setText(list.getData().getActivityPO().getDescription());
                 switch (state) {
                     case DOWN:
                         adapter.upData(list.getData().getPagePO().getItems());
