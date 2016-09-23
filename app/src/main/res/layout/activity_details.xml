@@ -1,10 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context="com.qianfeng.housefinish.ui.DetailsActivity">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="30dp">
+
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/icon_back_gary"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:text="商品详情"/>
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/share"/>
+
+
+    </LinearLayout>
+
 
     <ScrollView
         android:layout_width="match_parent"
@@ -237,5 +274,48 @@
 
     </ScrollView>
 
+</LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:layout_alignParentBottom="true"
+    android:layout_height="55dp">
+
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_vertical"
+        android:padding="5dp"
+        android:clickable="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/shopping_bg"
+        android:src="@mipmap/icon_shopping_cart"/>
+
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_weight="1"
+        android:layout_margin="10dp"
+        android:textColor="@color/white"
+        android:background="@drawable/shopping_bg"
+        android:layout_gravity="center_vertical"
+        android:text="加入购物车"/>
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/red"
+        android:textColor="@color/white"
+        android:layout_gravity="center_vertical"
+        android:text="立即购买"/>
+
 
 </LinearLayout>
+
+
+
+</RelativeLayout>
