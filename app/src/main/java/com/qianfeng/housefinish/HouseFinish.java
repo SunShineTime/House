@@ -2,6 +2,7 @@ package com.qianfeng.housefinish;
 
 import android.app.Application;
 
+import org.greenrobot.eventbus.EventBus;
 import org.xutils.x;
 
 /**
@@ -15,6 +16,7 @@ public class HouseFinish extends Application {
 
         x.Ext.init(this);
         x.Ext.setDebug(true);
+
 
     }
 }
