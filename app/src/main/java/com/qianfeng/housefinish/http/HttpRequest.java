@@ -21,4 +21,5 @@ public class HttpRequest {
     public static final String MAGICCHOOSE = "http://m.zhaidou.com/rzzh/list.html";
     public static final String MAGICONLINE = "http://m.zhaidou.com/design.html";
     public static final String MAGICIMAGE="http://portal-web.zhaidou.com/decorate/getSoftDecorateStyles.action";
+    public static final String MAGICCLASSROOM="http://portal-web.zhaidou.com/zd/getPosts.action?plug=006&pageSize=10&pageNo=";
 }
