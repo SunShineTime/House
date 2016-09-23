@@ -29,7 +29,7 @@ import android.widget.ImageView.ScaleType;
 import com.handmark.pulltorefresh.library.PullToRefreshBase.Mode;
 import com.handmark.pulltorefresh.library.PullToRefreshBase.Orientation;
 import com.handmark.pulltorefresh.library.R;
-
+//加载修改
 @SuppressLint("ViewConstructor")
 public class FlipLoadingLayout extends LoadingLayout {
 
@@ -99,7 +99,8 @@ public class FlipLoadingLayout extends LoadingLayout {
 	protected void refreshingImpl() {
 		mHeaderImage.clearAnimation();
 		mHeaderImage.setVisibility(View.INVISIBLE);
-		mHeaderProgress.setVisibility(View.VISIBLE);
+		mHeaderImageTwo.setVisibility(View.INVISIBLE);
+//		mHeaderProgress.setVisibility(View.VISIBLE);
 	}
 
 	@Override
@@ -110,8 +111,9 @@ public class FlipLoadingLayout extends LoadingLayout {
 	@Override
 	protected void resetImpl() {
 		mHeaderImage.clearAnimation();
-		mHeaderProgress.setVisibility(View.GONE);
+//		mHeaderProgress.setVisibility(View.GONE);
 		mHeaderImage.setVisibility(View.VISIBLE);
+		mHeaderImageTwo.setVisibility(View.VISIBLE);
 	}
 
 	@Override
