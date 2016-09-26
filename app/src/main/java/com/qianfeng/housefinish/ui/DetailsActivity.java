@@ -151,7 +151,6 @@ public class DetailsActivity extends BaseActivity implements RadioGroup.OnChecke
                 EventBus.getDefault().post(event);
 
                 initName( names);
-
             }
 
             @Override
@@ -169,8 +168,6 @@ public class DetailsActivity extends BaseActivity implements RadioGroup.OnChecke
 
             }
         });
-
-
     }
 
     private void initName(List<Name> names) {
@@ -180,12 +177,9 @@ public class DetailsActivity extends BaseActivity implements RadioGroup.OnChecke
         for (Name name : names) {
           color.put(name.getAttributeValue1(),name.getAttributeValue1());
             size.put(name.getAttributeValue2(),name.getAttributeValue2());
-
         }
-
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         layoutParams.setMargins(10,0,10,0);
-
         int id = 0;
         for (String string : color.values()) {
             TextView textView = new TextView(DetailsActivity.this);
@@ -198,8 +192,6 @@ public class DetailsActivity extends BaseActivity implements RadioGroup.OnChecke
             textView.setOnClickListener(this);
             mName1More.addView(textView);
         }
-
-
         for (String string : size.values()) {
             TextView textView = new TextView(DetailsActivity.this);
             textView.setText(string);
@@ -211,32 +203,23 @@ public class DetailsActivity extends BaseActivity implements RadioGroup.OnChecke
             textView.setOnClickListener(this);
             mName2More.addView(textView);
         }
-
     }
 
     @Override
     public void onCheckedChanged(RadioGroup group, int checkedId) {
         switch (checkedId) {
             case R.id.details_left_rbtn:
-
                 mLeftLine.setVisibility(View.VISIBLE);
                 mRightLine.setVisibility(View.INVISIBLE);
-
                 switchPages(DetailsLeftFragment.TAG,DetailsLeftFragment.class);
-
                 break;
             case R.id.details_right_rbtn:
-
                 mRightLine.setVisibility(View.VISIBLE);
                 mLeftLine.setVisibility(View.INVISIBLE);
-
                 switchPages(DetailsRightFragment.TAG,DetailsRightFragment.class);
                 break;
         }
-
     }
-
-
     private void switchPages(String tag,Class<? extends Fragment> cls){
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction transaction = fm.beginTransaction();
@@ -264,14 +247,10 @@ public class DetailsActivity extends BaseActivity implements RadioGroup.OnChecke
             transaction.add(R.id.details_framlayout,mShowFragment,tag);
         }
         transaction.commit();
-
     }
-
 
     @Override
     public void onClick(View v) {
-
-
         switch (((LinearLayout) v.getParent()).getId()) {
             case R.id.details_name1_more:
 
@@ -317,11 +296,6 @@ public class DetailsActivity extends BaseActivity implements RadioGroup.OnChecke
 
                 break;
         }
-
-
-
-
-
 //        String s = ((TextView) v).getText().toString();
 //        Toast.makeText(DetailsActivity.this, s, Toast.LENGTH_SHORT).show();
     }
